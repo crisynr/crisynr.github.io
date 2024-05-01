@@ -3,9 +3,9 @@
 }
 header {
     background-color: white;
-    overflow: hidden;
-    margin: 0%;
-    padding: 0%;
+}
+.browser {
+    text-align: center;
 }
 h1{
     color: darkblue;
@@ -22,7 +22,7 @@ time {
     font-weight: bold;
 }
 body {
-    font-family:sans-serif, Arial, Helvetica;
+    font-family:sans-serif,Arial, Helvetica;
     font-size: 90%;
     background-color: lightgray;
 }
@@ -48,5 +48,5 @@ footer {
   }
 .fa-solid {
     color: black;
-    size: 150%;
+    size: 18px;
 }

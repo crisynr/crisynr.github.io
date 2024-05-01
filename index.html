@@ -1,42 +1,60 @@
 <!DOCTYPE html>
-<hmtl>
-    <head>
-        <title>H O T E L</title> 
-        <link rel="stylesheet" type="text/css" href="styles/main.css"/>
-        <style>
-            body {
-                font-family: Sans-serif, Helvetica, Arial;
-                font-size: 90%;
-            }
-        </style>
+<hmtl lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="content-type" content="text/hmtl">
+        <!-- meta http-equiv="refresh" content="30"-->
+        
+        <title> H O T E L </title>
+        <meta name="description" content="Hotel Direct Bookings">
+        <meta name="author" content="HOTEL by Cristiane Nakata">
+        <!--meta name="language" content="english"-->
+        
+        <meta name="keywords" content="Hotel, Booking, Ireland">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=yes">
+        <meta name="HandheldFriendly" content="true">
+        
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+        <!--script src="https://kit.fontawesome.com/a1ec5d8fd9.js" crossorigin="anonymous"></script-->  
     </head>
+
     <body>
         <header>
+        <div class="header">
             <nav>
                 <menu>
-                <a href="#home"><img src="img/logo_hotel.png"></a>
+                    <a href="#home"><img src="img/logo_hotel.png"></a>
                     <a href="#language">ENGLISH</a></li>
                     <a href="#mybookings">MY BOOKINGS</a></li>
                     <a href="#signin">SIGN IN</a></li>
                 </menu>
-
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
             </nav>
+        </div>
         </header>
+        
         <main>
-            <article>
-                <h1><center>Where are you going?</center></h1>
-                <p><center>Choose your destination</center>
+        <div class="browser">
+            <i class="fa-solid fa-location-dot"></i>
+            <h2>WHERE ARE YOU GOING?</h2>
+            <input type="search" alt="Choose your destination">
+            <article>    
+                Choose your destination
+                    <dl>
+                        <li><a href="#brasil">Brazil</a></li>
+                        <li><a href="#ireland">Ireland</a></li>
+                        <li><a href="#japan">Japan</a></li>
+                        <li><a href="#portugal">Portugal</a></li>
+                    </dl>
             </article>
-            <section>
+        </div>
+            <section class="section1">
                 <abbr> 
                     <strong> Section </strong></p>
                 </abbr>
-            </section>
             <details>
                 Details 1<br>
                 Details 2<br>
@@ -53,13 +71,15 @@
                         </dt>
                     </dl>
                 </dd> 
-      
+            </section>
         </main>
         
         <mark>
             <q>Mark</q></p>
         </mark>
-
+        <br>
+        <i class="fa-solid fa-chevron-up"></i>
+        <br>
          <mark>
             <q>Mark 2</q></p>
         </mark>
@@ -73,7 +93,15 @@
         </sup>
 
         <br><br>
+            3<sup>rd</sup>
+        <br><br>
 
+            <dl>
+                <dt>coffee</dt>
+                <dd>hot drink</dd>
+            </dl>
+
+        <br><br>
             <s>Strikethrough</s></p>
         <code>
             <figcaption>
@@ -125,14 +153,55 @@
             </p>
         </cite>
 
-        <footer>  
-            <hr>                
-            <smal>
-                    Copywrite @ 
-                    <time datetime="2024-04-24"> 2024 </time> 
-                    Hotel by Cristiane Nakata. All rights reserved. 
-            </smal>
-
-        </footer>      
+    <footer>  
+        <table>
+            <th>
+                <p>
+                    <a href="#connect">Connect with us </a>
+                </p>    
+                <td>
+                    <p>
+                    <a href="#ourcompany">Our Company </a>
+                    </p>      
+                </td>
+                <td>
+                    <p>
+                    <a href="#travelprofessionals">Travel Professionals </a>
+                    </p>      
+                </td>
+                <td>
+                    <p>
+                    <a href="#corporate">Corporate </a>
+                    </p>      
+                </td>
+                <td>
+                    <p>
+                    <a href="#legal">Legal </a>
+                    </p>      
+                </td>
+                <td>
+                    <p>
+                    <a href="#help">Help </a>
+                    </p>      
+                </td>
+                <td>
+                    <p><br>
+                    <i class="fa-solid fa-chevron-up"></i>
+                    </p>      
+                </td>
+            </th> 
+        </table>
+            <p>
+            <div id="copyright">
+            
+            
+            Copyright <i class="fa-regular fa-copyright"></i> <time datetime="2024-04-24"> 2024 </time> 
+            Hotel CN. All rights reserved. 
+            </p>
+        </div>
+    </footer> 
+    
+    <script src="js/main.js>"></script>      
+    
     </body>
 </hmtl>
