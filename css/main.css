@@ -1,19 +1,35 @@
 *{
     box-sizing:border-box;
+    font-family: sans-serif, Arial, Helvetica;
 }
-header {
+.main-header {
     background-color: white;
+    margin-left: 0;
+}
+.toplogo {
+    height: 20%;
+}
+body {
+  margin-left: 0;  
 }
 .browser {
+    width: 100%;
+    position: absolute;
+    justify-content: center;
     text-align: center;
 }
 h1{
-    color: darkblue;
-    font-size: 150%;
-}
-h2{
     color: black;
     font-size: 100%;
+    font-weight: lighter;
+}
+h2{
+    color: darkslategray;
+    font-size: 90%;
+}
+h3{
+    color: darkslategray;
+    font-size: 80%;
 }
 .section1 {
     background-color: white;
@@ -23,14 +39,23 @@ time {
 }
 body {
     font-family:sans-serif,Arial, Helvetica;
-    font-size: 90%;
+    font-size: 80%;
     background-color: lightgray;
 }
+.space {
+    border: 30px;
+    padding: 5px;
+    background: rgb(66, 0, 221);
+}
 .browser {
+    border: 30px;
+    padding: 5px;
     background: white;
+
   }
 table, th, td {
     border: 1px solid white;
+    width: 100%;
     border-radius: 10px;
     border-collapse: collapse;
   }
@@ -50,3 +75,85 @@ footer {
     color: black;
     size: 18px;
 }
+.member {
+    padding: 10px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 2px;
+}
+
+@media screen and (max-width:600px){
+    body{
+        color: rgb(0, 0, 0);
+    }
+}
+.card {
+    flex:50%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  
+  /*.container {
+    justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
+    align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+}
+  */
+
+nav {
+background-color: white;
+width: 100%;
+}
+nav a{
+    display: block;
+}
+
+#menu {
+    background-color: black;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 10px 50px; /* row-gap column gap */
+    margin: 0%;
+
+
+    color: white;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration:gold;
+}
+  
+div.polaroid {
+    margin:25px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  div.container {
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    position: relative;  
+}
+
+.flex-browser {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    position: relative;  
+    flex:auto;
+}
+
+.fa-earth-americas,.fa-suitcase,.fa-user {
+    color: whitesmoke;
+  }
+
+  

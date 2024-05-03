@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <hmtl lang="en">
     <head> 
+        <!--Metadata-->
         <meta charset="UTF-8">
         <meta http-equiv="content-type" content="text/hmtl">
         <!-- meta http-equiv="refresh" content="30"-->
         
         <title> H O T E L </title>
-        <meta name="description" content="Hotel Direct Bookings">
-        <meta name="author" content="HOTEL by Cristiane Nakata">
+        <meta name="description" content="H O T E L Direct Bookings in Brazil, Ireland, Japan and Portugal">
+        <meta name="author" content="Cristiane Nakata">
         <!--meta name="language" content="english"-->
-        
-        <meta name="keywords" content="Hotel, Booking, Ireland">
         <meta name="robots" content="index, follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Metadata for Mobile*/-->
         <meta name="format-detection" content="telephone=yes">
         <meta name="HandheldFriendly" content="true">
+
+        <!--*Metadata Open Graph Protocol (OGP) for Social Media Cards and SEO (Meta Course)*/
+        <meta property="og:title" content="Homepage"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="logo_hotel.png"/>
+        <meta property="og:url" content="https://htmlpreview.github.io/?https://github.com/crisynr/hotel/blob/a0085e3/index.html">
+        <meta property="og:description" content="Hotel is a website developed as Final Project for the UCD Front-end Web Development Course"/>
+        <meta property="og:locale" content="en_IE"/>
+        <meta property="og:site_name" content=" H O T E L "/-->
         
+        <!--Styles-->
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/all.min.css">
         <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
         <!--script src="https://kit.fontawesome.com/a1ec5d8fd9.js" crossorigin="anonymous"></script-->  
     </head>
-
     <body>
         <header>
-        <div class="header">
             <nav>
-                <menu>
-                    <a href="#home"><img src="img/logo_hotel.png"></a>
-                    <a href="#language">ENGLISH</a></li>
-                    <a href="#mybookings">MY BOOKINGS</a></li>
-                    <a href="#signin">SIGN IN</a></li>
-                </menu>
-            </nav>
-        </div>
+                <div id="toplogo"><a href="#home"><img src="img/logo_hotel.png"></div>  
+            </nav>     
+            <div id="menu">
+                <i class="fa-solid fa-earth-americas"></i><a href="#language"> ENGLISH</a> 
+                <i class="fa-solid fa-suitcase"></i><a href="#mybookings"> MY BOOKINGS</a>
+                <i class="fa-regular fa-user"></i> <a href="#signin"> SIGN IN</a>
+            </div>
         </header>
-        
         <main>
-        <div class="browser">
+        <div class="flex-browser">
+            <div class="space"></div>
+            <div class="browser">
             <i class="fa-solid fa-location-dot"></i>
             <h2>WHERE ARE YOU GOING?</h2>
-            <input type="search" alt="Choose your destination">
+            <input type="list" id="destination" name="destination" required>
+            <i class="fa-solid fa-magnifying-glass"></i>
             <article>    
                 Choose your destination
                     <dl>
@@ -51,6 +61,17 @@
                     </dl>
             </article>
         </div>
+
+
+                <img src="img/intro-galway-01.png" style="width:100%">
+                <cite>
+                    <div class="container">
+                    <p><u>intro-galway-01</u>Image generated using the prompt "galway city young family with boy trip giant causey mountains" by Krea.AI, 2024 (https://www.krea.ai/apps/image/realtime).</p>
+                    </div>
+                </cite>
+                <br>
+        </div>
+
             <section class="section1">
                 <abbr> 
                     <strong> Section </strong></p>
@@ -109,21 +130,25 @@
             </figcaption>
         </code>
         <br>
-        <img src="img/intro-galway-01.png">
+        <div class="polaroid">
+        <img src="img/intro-galway-01.png" style="width:100%">
         <cite>
-            <p>
-            <u>intro-galway-01</u>
-            Image generated using the prompt "galway city young family with boy trip giant causey mountains" by Krea.AI, 2024 (https://www.krea.ai/apps/image/realtime).
-            </p>
+            <div class="container">
+            <p><u>intro-galway-01</u>Image generated using the prompt "galway city young family with boy trip giant causey mountains" by Krea.AI, 2024 (https://www.krea.ai/apps/image/realtime).</p>
+            </div>
         </cite>
-        <img src="img/intro-galway-02.png">
+        </div>
+        <br>
 
+        <img src="img/intro-galway-02.png">
         <cite>
             <p>
             <u>intro-galway-02</u>
             Image generated using the prompt "giant galway hotel with family flo pool flowers" by Krea.AI, 2024 (https://www.krea.ai/apps/image/realtime).
             </p>
         </cite>
+
+        <br>
         <img src="img/intro-galway-03.png">
         <cite>
             <p>
@@ -185,17 +210,17 @@
                     </p>      
                 </td>
                 <td>
-                    <p><br>
-                    <i class="fa-solid fa-chevron-up"></i>
+                    <p>
+                        <button onclick="alert('Top Button Test')"> 
+                            <i class="fa-solid fa-chevron-up" alt="Submit the form" height="64" width="64"></i>
+                        </button>
                     </p>      
                 </td>
             </th> 
         </table>
-            <p>
-            <div id="copyright">
-            
-            
-            Copyright <i class="fa-regular fa-copyright"></i> <time datetime="2024-04-24"> 2024 </time> 
+
+        <div id="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> <time datetime="2024-04-24"> 2024 </time> 
             Hotel CN. All rights reserved. 
             </p>
         </div>
