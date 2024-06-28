@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "watch:scss": "node-sass -w styles/style.scss stykes/stule.css"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
+
+
+{
+  "args": {
+      "message": "Go to Visualize tab on the right 👉 located alongside the Pretty, Raw, and Preview options. We have added the visualization code to the Tests tab for a request."
+  },
+  "headers": {
+      "host": "postman-echo.com",
+      "x-request-start": "t=1718196145.919",
+      "connection": "close",
+      "content-length": "183",
+      "x-forwarded-proto": "https",
+      "x-forwarded-port": "443",
+      "x-amzn-trace-id": "Root=1-666997b1-47b318c86e5c0e4c58e08081",
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.39.0",
+      "accept": "*/*",
+      "cache-control": "no-cache",
+      "postman-token": "3bc7e912-70e5-4b5e-9bea-40c6d7e62e38",
+      "accept-encoding": "gzip, deflate, br",
+      "cookie": "sails.sid=s%3AXXbUfWACnkEwq0o99U48zDm0TNFjlR-p.r%2Bdcqld8ONaPez%2BEa9R5bt5JqMTYdW1HP5hkzHOaWqA"
+  },
+  "url": "https://postman-echo.com/get"
+}

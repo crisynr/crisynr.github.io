@@ -25,17 +25,33 @@
         <meta property="og:description" content="Hotel is a website developed as Final Project for the UCD Front-end Web Development Course"/>
         <meta property="og:locale" content="en_IE"/>
         <meta property="og:site_name" content=" H O T E L "/-->
+            
+        <!--Google Font Styles-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         
-        <!--Styles-->
+        <!--Font Awesome Styles-->
+        <!--<link rel="stylesheet" type="text/css" href="styles/styles.css">-->
+        <!--<link rel="stylesheet" type="text/css" href="index.scss">-->
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/all.min.css">
         <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
-        <!--script src="https://kit.fontawesome.com/a1ec5d8fd9.js" crossorigin="anonymous"></script-->  
+        <script src="https://kit.fontawesome.com/a1ec5d8fd9.js" crossorigin="anonymous"></script>  
+
     </head>
     <body>
+
+
+                <p>DIV CONTAINER<p>
+        
+        <!--Secure Iframe-->
+        <iframe src="placeholder.png" width="320" height="128" sandbox allow="payment 'none';camera 'none';microphone 'none'"></iframe>
+
         <header>
             <nav>
-                <div id="toplogo"><a href="#home"><img src="img/logo_hotel.png"></div>  
+                <div id="toplogo"><a href="#home"><img src="img/logo_hotel.png">  
+                </div>
             </nav>     
             <div id="menu">
                 <i class="fa-solid fa-earth-americas"></i><a href="#language"> ENGLISH</a> 
@@ -49,24 +65,36 @@
             <div class="browser">
             <i class="fa-solid fa-location-dot"></i>
             <h2>WHERE ARE YOU GOING?</h2>
-            <input type="list" id="destination" name="destination" required>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <article>    
-                Choose your destination
+            
+            <form action="/action_page">
+            <input type="text" id="search" name="search" list="destination" required placeholder="Choose your destination">
+            <datalist id="destination">
+                <option value="Brazil"><a href="#brazil">Brazil</a></option>
+                <option value="Ireland"><a href="#ireland">Ireland</a></option>
+                <option value="Japan"><a href="#japan">Japan</a></option>
+                <option value="Portugal"><a href="#portugal">Portugal</a></option>
+            </datalist>
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <br><br>    
+        </form>
+            
+            <!--article>    
                     <dl>
                         <li><a href="#brasil">Brazil</a></li>
                         <li><a href="#ireland">Ireland</a></li>
                         <li><a href="#japan">Japan</a></li>
                         <li><a href="#portugal">Portugal</a></li>
                     </dl>
-            </article>
+            </article>-->
         </div>
 
 
                 <img src="img/intro-galway-01.png" style="width:100%">
                 <cite>
                     <div class="container">
-                    <p><u>intro-galway-01</u>Image generated using the prompt "galway city young family with boy trip giant causey mountains" by Krea.AI, 2024 (https://www.krea.ai/apps/image/realtime).</p>
+                        <figcaption>
+                            intro-galway-01 Image generated using the prompt "galway city young family with boy trip giant causey mountains" by Krea.AI, 2024 (https://www.krea.ai/apps/image/realtime).
+                        </figcaption>
                     </div>
                 </cite>
                 <br>
@@ -132,11 +160,9 @@
         <br>
         <div class="polaroid">
         <img src="img/intro-galway-01.png" style="width:100%">
-        <cite>
-            <div class="container">
-            <p><u>intro-galway-01</u>Image generated using the prompt "galway city young family with boy trip giant causey mountains" by Krea.AI, 2024 (https://www.krea.ai/apps/image/realtime).</p>
-            </div>
-        </cite>
+                <figcaption>
+                    <u>intro-galway-01</u>Image generated using the prompt "galway city young family with boy trip giant causey mountains" by Krea.AI, 2024 (https://www.krea.ai/apps/image/realtime).
+                </figcaption>
         </div>
         <br>
 
@@ -178,6 +204,14 @@
             </p>
         </cite>
 
+        <label for="course">Choose a course:</label><br> 
+            <select id="course" name="courselist"> 
+                <option value="html">HTML Introduction</option> 
+                <option value="css">Styling with CSS</option> 
+                <option value="js">JavaScript</option> 
+                <option value="react">React Basics</option> 
+            </select> 
+
     <footer>  
         <table>
             <th>
@@ -211,7 +245,7 @@
                 </td>
                 <td>
                     <p>
-                        <button onclick="alert('Top Button Test')"> 
+                        <button onclick="alert('Test Alert: Are you sure you want to continue?')"> 
                             <i class="fa-solid fa-chevron-up" alt="Submit the form" height="64" width="64"></i>
                         </button>
                     </p>      
