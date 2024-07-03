@@ -1,11 +1,34 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchDestination from '../components/SearchDestination.astro';   
 
-const title = "H O T E L";
-const description = "Homepage for my First Astro Project";
+const title = "H O T E L by N A K A T A";
+const description = "Homepage for my Astro Project";
 ---
+
 <BaseLayout description={description} title={title}>
-	<main>
-		<p>The <slot /> element from the layout is replaced with the content from index.astro.</p>
-	</main>
+<!--Main-->
+<main>
+    <div class="background">
+        <div class="wrap-search">
+            <SearchDestination/>
+        </div>
+    </div>
+    <section>
+        <article>
+            <p class="first-letter"> Nam vel facilisis lorem. Sed finibus sapien et lorem maximus, id blandit dolor accumsan. Suspendisse eget nisi eget eros viverra tincidunt in vitae lorem. Nam lobortis, ligula quis malesuada aliquet, ipsum ligula sollicitudin elit, quis vehicula justo sapien et tellus. Aenean massa tortor, pulvinar sit amet feugiat nec, pharetra vel turpis. Duis dignissim ex lectus, vel consectetur sem molestie sit amet. Aenean volutpat rhoncus nunc quis sodales.</p>
+        </article>
+        <article>
+            <p class="first-letter">
+                Our mission is:
+                <li>Sed finibus sapien et lorem maximu.</li> 
+                <li>Nam vel facilisis lorem.</li>
+                <li>Aenean volutpat rhoncus nunc quis sodales. </li> 
+                </ul>
+            <p>
+				Suspendisse eget nisi eget eros viverra tincidunt in vitae lorem.
+            </p>
+        </article>
+    </section>
+</main>
 </BaseLayout>

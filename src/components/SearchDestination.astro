@@ -1,15 +1,14 @@
 ---
-import "../styles/search.css";
+import "../styles/searchdestination.css";
 import "../styles/stickybar.css";
 
 const { imageURL } = Astro.props;
 ---
 <!--Search Destination-->
-<div>
     <form class="search-destination" action="action_page.php">
         <p align-text="center"><i class="fa fa-map-marker" aria-hidden="true"></i>
         <br>WHERE ARE YOU GOING?</p>
-        <input type="text" id="search" name="search" list="destination" required placeholder="Choose your destination">
+        <input type="text" list="destination" required placeholder="Choose your destination">
         <datalist id="destination">
             <option value="Brazil"><a href="#brazil">Brazil</a></option>
             <option value="Ireland"><a href="#ireland">Ireland</a></option>
@@ -18,8 +17,6 @@ const { imageURL } = Astro.props;
         </datalist>
         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>   
     </form>
-</div>
-
 <!--Search by Eircode
 <div class="search">
     <table>

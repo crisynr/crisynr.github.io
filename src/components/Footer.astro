@@ -1,11 +1,53 @@
 ---
+import "../styles/footer.css";
+
 const { title } = Astro.props;
 ---
 <!--Footer-->
 <footer>
-<p>Footer</p>	
-<footer class="student-details">
-	<p>UCD Project</p>
-	<p>Course 24-03 Front-End Web Development</p>
-	<p>Student Cristiane Nakata</p>
+	<div class="box" id="bg-foot"> 
+		<div>
+			<a href="#"><i class="fa-solid fa-arrow-up"></i> Top</a>
+		</div>
+	</div> 
+	<div class="box">
+		<div class="column-footer">
+			<h1>Client Care</h1>
+			<ul>
+				<li><a href="/">Contact us</a></li>
+				<li><a href="/">Track your order</a></li>
+				<li><a href="/">Product Care and Repair</a></li>
+				<li><a href="/">Book an Appointment</a></li>
+				<li><a href="/">Shipping & Returns</a></li>
+			</ul>
+		</div>
+		<div class="column-footer">
+			<h1>Our Company</h1>
+			<ul>
+				<li><a href="/">About us</a></li>
+				<li><a href="/">Sustainability</a></li>
+				<li><a href="/">Careers</a></li>
+			</ul>
+		</div>
+		<div class="column-footer">
+			<h1>Related Sites</h1>
+			<ul>
+				<li><a href="/">Wedding & Gift Registry</a></li>
+				<li><a href="/">Business Accounts</a></li>
+				<li><a href="/">Alertline</a></li>
+				<li><a href="/">Site Index</a></li>
+			</ul>
+		</div>
+		<div class="column-footer">
+			<div class="form-news">
+				<h1>Latest News</h1>
+				Be the first to know about exciting new designs, events and much more.</p>
+				<input type="email" placeholder="Enter your email" name="email"></input>
+				<button type="submit" class="button">Sign up</button>
+			</div>
+		</div>
+	</div>   
+	<div class="copyright">
+		<p>UCD Project | Course 24-03 Front-End Web Development © Cristiane Nakata</p>
+	</div>
 </footer>
