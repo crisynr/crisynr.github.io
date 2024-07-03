@@ -1,0 +1,6 @@
+/*CSS reset*/
+* {margin:0; padding:0; box-sizing: border-box;}
+img {border: 0;}
+p {margin:5px 0 10px 0;} 
+a {color: black;}
+body {height: 100%; scroll-behavior: smooth;}

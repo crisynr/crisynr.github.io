@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  }
+header { 
+   grid-area: header; 
+   background-color: lightsalmon; 
+}
+footer { 
+  grid-area: footer; 
+  background-color: firebrick; 
+}
+main {
+  grid-area: main; 
+  } 
+  .grid-container {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:"header header header"
+    "left" "center" "right" 
+    "footer footer footer";
+  }
+ .left { 
+    background-color: lightblue; 
+    
+  } 
+.center { 
+    background-color: lightyellow; 
+  } 
+.right { 
+    background-color: lightblue; 
+  }
+ 
+  @media (max-width: 600px) {
+    .grid-container  {
+      min-height: 50vh;
+      grid-template-rows: auto auto 1fr auto auto; 
+      grid-template-columns: 100%;
+    }
+  }
+
+  /* Add code for container class below 
+.container {
+    display: grid;
+    max-width: 900px;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:"header header header"
+    "left" "center" "right" 
+    "footer footer footer";
+}
+  /* Add media rules for container class below 
+@media (min-width: 440px) {
+  .container {
+    min-height: 50vh;
+    grid-template-rows: auto auto 1fr auto auto; 
+    grid-template-columns: 100%;
+  }
+}*/

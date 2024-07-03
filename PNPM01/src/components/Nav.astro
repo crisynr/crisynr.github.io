@@ -1,0 +1,76 @@
+---
+import "../styles/reset.css";
+import "../styles/nav.css";
+import "../styles/dropdown.css";
+import "../js/nav.js";
+
+const { title } = Astro.props;
+---
+<!--Navigation-->
+<nav class="stickyBar">
+  <div id="nav" role="navigation">
+    <!--a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    <a href="javascript:void(0);" class="icon-close" id="close" onclick="myFunction()"><i class="fa fa-window-close"></i></a>
+    -->
+
+    <a href="#nav" title="Show navigation">Show navigation</a>
+    <a href="#" title="Hide navigation">Hide navigation</a>
+    <ul>
+        <li>
+            <a href="/"><i class="fa-solid fa-suitcase" aria-hidden="true"></i> Home </a>      
+            <!--  <div class="dropdown">
+            <button class="dropbtn"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                <div class="dropdown-content">
+                    <div class="row">
+                        <div class="column">
+                            <div class="header">
+                            Shop by Category
+                            </div>
+                            <a href="#">Bracelets</a>
+                            <a href="#">Earings</a>
+                            <a href="#">Rings</a>  
+                            <a href="#"><strong>Explore All Jewellery > </strong></a>                
+                        </div>
+                        <div class="column">
+                            <div class="header">
+                            Shop by Metal
+                            </div>
+                            <a href="#">Gold</a>
+                            <a href="#">Rose Gold</a>
+                            <a href="#">Platinum</a>
+                            <a href="#">Sterling Silver</a>
+                        </div>
+                        <div class="column">
+                            <div class="header">
+                            Shop by Gemstones
+                            </div>
+                            <a href="#">Diamond</a>
+                            <a href="#">Pearl</a>
+                            <a href="#">Turquoise</a>
+                            <a href="#">Aquamarine</a>
+                            <a href="#">Coloured Gemstone</a>
+                        </div>
+                    </div>
+                </div>
+            </button> 
+            </div>  
+            -->
+        </li>
+        <li><a href="/" aria-haspopup="true"><span><i class="fa fa-bars" aria-hidden="true"></i> Menu</span></a>
+            <ul>
+                <li><a href="/">Our Hotels</a></li>
+                <li><a href="/">Bar & Restaurants</a></li>
+                <li><a href="/">Family Breaks</a></li>
+            </ul>
+        </li>
+        <li><a href="/"><i class="fa-solid fa-suitcase" aria-hidden="true"></i> My Bookings</a></li>
+        <li><a href="/" aria-haspopup="true"><span><i class="fa-regular fa-user" aria-hidden="true"></i> My Account</span></a>
+            <ul>
+                <li><a href="/">Sign in</a></li>
+                <li><a href="/">Join us</a></li>
+                <li><a href="/">Corporate Login</a></li>
+            </ul>
+        </li>
+    </ul>
+  </div>
+</nav>

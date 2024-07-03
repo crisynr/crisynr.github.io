@@ -1,0 +1,26 @@
+---
+const { imageURL } = Astro.props;
+---
+<nav class="search-menu">
+    <table>
+    <tr>
+    <h1>Find a lovely babysitter in your area</h1>
+        <td><input type="list" id="address-client" name="address-client" required>
+            <textarea alt="Your street name"> Your street name </textarea></td>
+        <td><textarea alt="Start date"> Start date </textarea></td>
+        <td><textarea alt="End date"> End date </textarea></td>
+    </tr>
+    </table>
+</nav>
+
+<form action="/action_page">
+    <input type="text" id="search" name="search" list="destination" required placeholder="Choose your destination">
+    <datalist id="destination">
+        <option value="Brazil"><a href="#brazil">Brazil</a></option>
+        <option value="Ireland"><a href="#ireland">Ireland</a></option>
+        <option value="Japan"><a href="#japan">Japan</a></option>
+        <option value="Portugal"><a href="#portugal">Portugal</a></option>
+    </datalist>
+    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+<br><br>    
+</form>

@@ -1,0 +1,5 @@
+/*CSS print*/
+header, nav, footer, .noprint
+{
+display: none;
+}

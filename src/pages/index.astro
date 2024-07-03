@@ -1,16 +1,11 @@
 ---
-import 
----
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+const title = "H O T E L";
+const description = "Homepage for my First Astro Project";
+---
+<BaseLayout description={description} title={title}>
+	<main>
+		<p>The <slot /> element from the layout is replaced with the content from index.astro.</p>
+	</main>
+</BaseLayout>

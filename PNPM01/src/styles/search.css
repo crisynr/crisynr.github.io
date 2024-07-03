@@ -1,0 +1,36 @@
+.search-destination {
+  box-sizing: border-box;
+  margin: 16px;
+  text-align: center;
+}
+
+input[type=text] {
+  padding: 10px;
+  font-size: 14px;
+  border: 0 solid grey;
+  float: center;
+  width: 300px;
+  background: #f1f1f1;
+}
+
+button {
+  padding: 10px;
+  font-size: 14px;
+  float: center;
+  width: 60px;
+  background: #f1f1f1;
+  color: #000000;
+  border: 0 solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #81d8d0;
+}
+
+button::after {
+  content: "";
+  clear: both;
+  display: table;
+}
