@@ -1,13 +1,30 @@
-@import url("reset.css"); @import url("typography.css"); @import url("layout.css"); 
-/* @import url("ie.css")*/
-body, a {
+@import url("reset.css"); 
+@import url("typography.css"); 
+@import url("layout.css"); 
+
+html {
+  margin: auto;
+  background-color: #ffffff;
+  /*max-width: 1280px;*/
+}
+
+body {
     font: 14px "Raleway",sans-serif, Helvetica, Arial;
     background-color: white;
+    margin: 20px;
+}
+
+a {
+  font: 14px "Raleway",sans-serif, Helvetica, Arial;
 }
 
 /* Paragraph spacing*/
 p {
   line-height: 2rem; 
+}
+
+li {
+  padding-top: 20px;
 }
 
 /* Title by default*/
@@ -38,7 +55,7 @@ a:visited {
 }
 
 /* Links by default when hovering over the link with mouse*/
-a:hover {
+a:hover i:hover {
   color: #000000;
   background-color: transparent;
   text-decoration: underline;
@@ -53,6 +70,15 @@ a:active {
   text-decoration: underline;
   text-decoration-color: #81d8d0;
   font-weight:bold;
+}
+
+i:hover, button:hover {
+  background: #81d8d0;
+  border-radius: 30px;
+}
+
+i:active {
+  background: #ddd;
 }
 
 header {
@@ -226,8 +252,7 @@ column a:visited {
   background-image: url("../images/bg-01.png");
   background-color: none;
   background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 500px;
+  max-height: 400px;
 }
 
 /* Section for organising the articles*/
@@ -236,10 +261,19 @@ section {
   padding: 16px 0;
 }
 
+#section-box {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  max-width: 1280px;
+} 
+
 /* Content inside the section */
 article {
   flex: 1;
   padding: 0 16px;
+
 }
 
 /* Article item list marker*/
@@ -256,28 +290,8 @@ article li::marker {
   float:center;
   border-radius: 25px;
   block-size: fit-content;
-  background-color: #f9f9f9;/*flex: 1 1 auto; flex-grow flex-shrink flex-basis*/
   overflow: hidden;
-  border: 2px #ffffff;
 }
-
-/*
-background-clip: content-box;
-border-style:dotted;
-padding: 50px;
-float: center;
-border-radius: 25px;
-background-color: #f9f9f9; flex: 1 1 auto; flex-grow flex-shrink flex-basis
-overflow: hidden;
-border: 2px #ffffff;
-
-.wrap-search:hover, .shadow:hover {
-  color: 0 0 5px #dedede;
-  box-shadow:
-  0 0 5px #f9f9f9,
-  0 0 10px #000000; /* 1-X-coordinate 2-Y-coordinate 3-Blur Radius 4-Shadow Color
-}
-*/
 
 /* First image as background */
 .background{
@@ -290,6 +304,7 @@ border: 2px #ffffff;
   min-height: 500px;
   text-align: center;
   z-index: 2;
+  margin-top: 80px;
 }
 
 /* First letter bigger colourfull and in evidence */
@@ -300,3 +315,348 @@ border: 2px #ffffff;
   font-weight: bold; 
   line-height: 1; 
 }
+
+/* Navigation Style*/
+nav {
+  background-color: #ffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav i {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Navigation Style for Desktop*/
+@media only screen and ( min-width: 600px ) { 
+  #nav {
+    width: 100%;
+    position: static;
+    margin: 0;
+  }
+}
+/*Menu Level*/
+nav ul {
+  padding: 0;
+}
+nav ul, li {
+  list-style: none;
+}
+nav #nav {
+  width: 100%; 
+  position: absolute;
+}
+nav #nav > a {
+  display: none;
+}
+nav #nav li {
+  position: relative;
+}
+nav #nav li a {
+  display: block;
+}
+nav #nav li a:active {
+  display: block;
+}
+nav #nav span:after {
+  width: 0;
+  height: 0;
+  border-bottom: none;
+  border-top-color: #ffffff;
+  content: '';
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  right: -6px;
+}
+  /* First level */
+nav #nav > ul {
+  height: 60px;
+  background-color: #ffffff;
+}
+nav #nav > ul > li {
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+nav #nav > ul > li > a {
+  height: 100%;
+  font-size: 16px;
+  line-height: 60px; 
+  text-align: center;
+}
+nav #nav > ul > li:not( :last-child ) > a {
+  border-right: 2px solid #ffffff;
+}
+nav #nav > ul > li:hover > a,
+nav #nav > ul:not( :hover ) > li.active > a {
+  background-color: #ffffff;
+}
+/* Second level */
+nav #nav li ul {
+  background-color: #ffffff;
+  color: #000000;
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+nav #nav li:hover ul {
+  display: block;
+  color: #000000;
+  left: 0;
+  right: 0;
+}
+nav #nav li:not( :first-child ):hover ul {
+  left: -1px;
+}
+nav #nav li ul a {
+  font-size: 16px;
+  color: #000000;
+  border-top: none; /*1px solid #000000*/
+  padding: 15px;
+}
+nav #nav li ul li a:hover,
+nav #nav li ul:not( :hover ) li.active a {
+  background-color: #ffffff;
+  color: #000000;
+}
+/* Responsive Navigation Style for Mobile*/
+@media only screen and ( max-width: 600px) 
+{
+  nav #nav {
+    background: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  nav #nav > a {
+    width: 60px; 
+    height: 60px; 
+    text-align: left;
+    text-indent: -9999px;
+    background-color: #ffffff;
+    position: relative;
+  }
+  /* Menu level */
+  nav #nav > a:before,
+  nav #nav > a:after {
+    position: absolute;
+    border: 2px solid #000000;
+    top: 35%;
+    left: 25%;
+    right: 25%;
+    content: '';
+  }
+  nav #nav > a:after {
+    top: 60%;
+  }
+  nav #nav:not( :target ) > a:first-of-type,
+  nav #nav:target > a:last-of-type {
+    display: block;
+  }
+  /* First level */
+  nav #nav > ul {
+    height: auto;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  nav #nav:target > ul {
+    display: block;
+  }
+  nav #nav > ul > li {
+    width: 100%;
+    float: none;
+  }
+  nav #nav > ul > li > a {
+    height: auto;
+    text-align: left;
+    padding: 0 60px; 
+  }
+  nav #nav > ul > li:not( :last-child ) > a {
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
+  }
+  /* Second level */
+  nav #nav li ul {
+    color: #000000;
+    position: static;
+    padding: 60px;
+    padding-top: 0;
+  }
+  /* Fixed Nav*/
+  nav .sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+}
+
+	/* Footer Style */
+  footer {
+    background-color: #81d8d0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  footer h1 {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff;
+  }
+  
+  footer ul {
+    padding: 20px 0;
+  }
+  
+  /*Considering pseudo-class rules LVHA - Link, Visited, Hover, Active*/
+  footer a:link {
+    color: #000000;
+    background-color: transparent;
+    text-decoration: none;
+  }
+    
+  /* Links for Footer already visited*/
+  footer a:visited {
+    color: #000000;
+    background-color: #ddd;
+    text-decoration: none;
+  }
+    
+  /* Links for Footer when hovering over the link with mouse*/
+  footer a:hover {
+    color: #000000;
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    font-weight:bold;
+  }
+    
+  /* Links for Footer when selected*/
+  footer a:active {
+    color: #000000;
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    font-weight:bold;
+  }
+  
+  /* Back to the top of the page */
+  footer .partial-foot {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Grid for the Footer*/
+  footer .box {
+    background-color: transparent;
+    flex: 1 1 auto; /*flex-grow flex-shrink flex-basis*/
+  }
+    
+  footer .widget {
+    display: inline-block;
+    gap: 50px;
+    width: 200px;
+    font: 0.8rem "Raleway",sans-serif, Helvetica, Arial;
+    overflow: hidden;
+    vertical-align: text-top;
+    margin: 20px 10px;
+    justify-content: space-between;
+  }
+    
+  footer .widget h1 {
+    font: 0.8rem "Raleway",sans-serif, Helvetica, Arial;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+    
+  footer .widget li {
+    list-style-type: none;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+  footer .widget a {
+    display: inline-block;
+    padding-bottom: 20px;
+    font: 0.8rem "Raleway",sans-serif, Helvetica, Arial;
+  }
+  
+  footer i {
+    font-size: 1.5em;
+  }
+    
+  footer input[type=email] {
+    background: #ffffff;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: 2px solid #000000;
+    text-align: left;
+  }
+    
+  footer input[type=email]:hover {
+    border-style: #ddd;
+    outline: none;
+    text-align:  left;
+  }
+    
+  footer .button {
+    text-align: left;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+    
+  footer .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  footer .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  footer .button:hover span {
+    padding-right: 25px;
+  }
+  
+  footer .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  footer #social {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    text-decoration: none;
+    grid-column: auto;
+  }
+  
+  footer #email-newsletter {
+    display: grid;
+    row-gap: 5px;
+    text-align: left;
+  }
+  
+  footer #copyright {
+    background-color: #ffffff;
+    width: 100%;
+    font-size: 0.7rem;
+    text-align: center;
+  }
