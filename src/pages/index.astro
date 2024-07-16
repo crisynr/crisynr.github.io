@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Search from '../components/Search.astro';  
 
-
 const title = "H O T E L by N A K A T A";
 const description = "HOMEPAGE";
 ---
@@ -12,7 +11,7 @@ const description = "HOMEPAGE";
 <main>
     <div class="background">
         <div class="wrap-search">
-            <Search/>
+            <Search client:load/>
         </div>
     </div>
     <section id="section-box">

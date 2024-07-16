@@ -1,0 +1,52 @@
+<!--Map IE - Ireland-->
+<script>
+  const key = 'hhyINLMnMg5pSBBIII0T';
+  const map = L.map('map').setView([53.34, -7], 6); //starting position
+  const mtLayer = L.maptilerLayer({
+    apiKey: key,
+    style: "63c60a0d-9669-4cb8-84ec-4fe500d50d8c", 
+  }).addTo(map);
+</script>
+
+<script>
+  var map = L.map('map').setView([53.34, -7], 6);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  
+  var circle = L.circle([53.34, -6.26], { 
+  color: 'purple',
+  fillColor: 'none',
+  radius: 50000,
+  }).addTo(map);
+  circle.bindPopup("Dublin");
+  
+  var circle = L.circle([53.27, -9.05], {
+  color: 'purple',
+  fillColor: 'none',
+  radius: 50000,
+  }).addTo(map);
+  circle.bindPopup("Galway");
+
+  var marker = L.marker([53.34, -6.20]).addTo(map);
+  circle.bindPopup("Hotel Green");
+
+  var marker = L.marker([53.27, -9.10]).addTo(map);
+  circle.bindPopup("Hotel Red");
+
+  var marker = L.marker([53.27, -9.00]).addTo(map);
+  circle.bindPopup("Hotel Yellow");
+
+</script>
+
+<script>
+  import * as maptilersdk from '@maptiler/sdk';
+  maptilersdk.config.apiKey = 'hhyINLMnMg5pSBBIII0T';
+  const map = new maptilersdk.Map({
+    container: 'map', // container's id or the HTML element to render the map
+    style: maptilersdk.MapStyle.STREETS,
+    center: [0, 0], // starting position [lng, lat]
+    zoom: 0, // starting zoom
+  });
+</script>

@@ -1,109 +1,20 @@
-<!--Styke for Search Destination Bar-->
-<style> 
-.search-destination {
-  box-sizing: border-box;
-  padding: 16px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.6);
-  max-width: 1300px;
-  border-radius: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: bold;
-}
-
-.open-map {
-  color: #ffffff;
-  background-color: #000000;
-  padding: 16px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 300px;
-}
-
-.open-map a {
-  color: #ffffff;
-}
-
-.open-map:hover, .shadow:hover {
-  color: 0 0 0 #dedede;
-  box-shadow:
-  0 0 5px #f9f9f9,
-  0 0 5px #000000; /* 1-X-coordinate 2-Y-coordinate 3-Blur Radius 4-Shadow Color*/
-}
-
-i {
-  background-color: none;
-}
-
-input[type=text] {
-  padding: 10px;
-  font-size: 14px;
-  height: 40px;
-  width: 200px;
-  color: #000000;
-  background: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 20px;
-  float: center;
-  text-align: center;
-}
-
-button {
-  background: #d4d4d4;
-  border-radius: 30px;
-  padding: 10px;
-  font-size: 14px;
-  float: center;
-  height: 40px;
-  width: 40px;
-  color: #000000;
-  border: 0 solid #d4d4d4;
-  border-left: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #81d8d0;
-  border-radius: 30px;
-}
-
-button:active{
-  background: #d4d4d4;
-  border-radius: 30px;
-}
-
-</style>
-
 <!--Search Destination Box-->
-<div class="search-destination">    
+<div class="search-destination">  
   <p style="text-align: center;"><i class="fa fa-map-marker" aria-hidden="true"></i><br>WHERE ARE YOU GOING?</p>
-  <input name="search" type="text" autocomplete="on" required placeholder="Choose your destination" list="destination">
-  <datalist id="destination">
-      <option value="Brazil">Brazil</option>
-      <option value="Ireland">Ireland</option>
-      <option value="Japan">Japan</option>
-      <option value="Portugal">Portugal</option>
-  </datalist>
-  <button type="submit" onclick="findit()"><i class="fa-solid fa-magnifying-glass"></i></button> 
+  <input id="destination-input" list="destination" type="text" autocomplete="on" required="" placeholder="Choose your destination">
+  <button type="submit" onclick="document.getElementById('destination-input').addEventListener('change', function() {const selectedValue = this.value; window.location.href = selectedValue;}"><i class="fa-solid fa-magnifying-glass"></i></button> 
+    <datalist id="destination">
+      <option>Brazil</option>
+      <option>Ireland</option>
+      <option>Japan</option>
+      <option>Portugal</option>
+    </datalist>
+  </input>
 </div>
 
-<!--Search Destination JS-->
-<script>
-  function findit() {
-      var selectedDestination = document.querySelector('input').value;
-      if (selectedDestination === "Brazil") {
-          window.location.href = "brazil";
-      } else if (selectedDestination === "Ireland") {
-          window.location.href = "ireland";
-      } else if (selectedDestination === "Japan") {
-          window.location.href = "japan";
-      } else if (selectedDestination === "Portugal") {
-          window.location.href = "portugal";
-      }
-  }        
-</script>
+
+
+
 
 <!--Search Destination JS-->
 <div class="open-map">
