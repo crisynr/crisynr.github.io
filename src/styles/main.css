@@ -9,9 +9,9 @@ html {
 }
 
 body {
-    font: 14px "Raleway",sans-serif, Helvetica, Arial;
-    background-color: white;
-    margin: 20px;
+  font: 14px "Raleway",sans-serif, Helvetica, Arial;
+  background-color: white;
+  margin: 20px;
 }
 
 a {
@@ -55,7 +55,7 @@ a:visited {
 }
 
 /* Links by default when hovering over the link with mouse*/
-a:hover i:hover {
+a:hover {
   color: #000000;
   background-color: transparent;
   text-decoration: underline;
@@ -72,7 +72,7 @@ a:active {
   font-weight:bold;
 }
 
-i:hover, button:hover {
+button:hover {
   background: #81d8d0;
   border-radius: 30px;
 }
@@ -130,6 +130,12 @@ nav a:hover {
   font-weight:bold;
 }
 
+nav i:hover {
+  color: #000000;
+  background-color: transparent;
+  font-weight:bold;
+}
+
 /* Links for Navbar when selected*/
 nav a:active {
   color: #000000;
@@ -147,7 +153,7 @@ nav a:active {
     width: 100%;
     left: 0;
     box-shadow: 0px 8px 16px 0px #f9f9f9; /*(in)set, horizontal, vertical, blur radius, color*/
-}
+  }
 
 /* Navbar container */
 .nav {
@@ -193,6 +199,7 @@ nav a:active {
 /* Dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+  position: absolute;
 }
   
 /* Three columns that floats next to each other */
@@ -245,49 +252,56 @@ column a:visited {
   clear: both;
 }
 
-/* Main picture background */
-#background{
-  background-attachment: scroll, local;
-  background-clip: content-box;
+/* Carousel background responsive*/
+.carousel-inner img {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Carousel background position*/
+#bg-carousel{
+  height: 100vh;
   background-image: url("../images/bg-01.png");
-  background-color: none;
+  background-position: center;
   background-repeat: no-repeat;
-  max-height: 400px;
-  z-index: -1;
+  background-size: cover;
+  text-align: center;
+  margin-top: 80px;
+  position: absolute;
+  margin-top: 100px;
 }
-
-/* Section for organising the articles*/
-section {
-  display: flex;
-  padding: 16px 0;
+#bg-01{
+  background-image: url("../images/bg-01.png");
 }
-
-#section-box {
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
+#bg-02{
+  background-image: url("../images/bg-02.png");
+}
+#bg-03{
+  background-image: url("../images/bg-03.png");
+}
+carousel-image {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* Floating box*/
+#frontpage{
+  position: absolute;
+  display: none;
+  color: red; 
+  font-size: larger;
+  background-color: yellow;
+  opacity: 0.5;
   padding: 50px;
-  max-width: 1280px;
-} 
-
-/* Content inside the section */
-article {
-  flex: 1;
-  padding: 0 16px;
-
 }
 
-/* Article item list marker*/
-article li::marker {
-  color: #81d8d0;
-  content: "○ ";
-  font-size: 1.1em;
-}
-
-/* Box for wrapping content in evidence */
+/* Floating box*/
 .wrap-search {
+  position: relative;
   background-clip:content-box;
-  padding: 300px 100px;
+  padding: 260px 100px;
   float:center;
   border-radius: 25px;
   block-size: fit-content;
@@ -302,10 +316,72 @@ article li::marker {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 500px;
+  max-height: 600px;
   text-align: center;
-  z-index: 2;
   margin-top: 80px;
+}
+
+/* Main picture background */
+#background{
+  position: static;
+  background-attachment: scroll, local;
+  background-clip: content-box;
+  background-image: url("../images/bg-01.png");
+  background-color: none;
+  background-repeat: no-repeat;
+  max-height: 600px;
+  z-index: -1;
+}
+
+/* Section for organising the articles*/
+section {
+  display: flex;
+  padding: 16px 0;
+}
+
+#section-box {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px 50px;
+  max-width: 1280px;
+} 
+
+#frame-list {
+  height: 900px; 
+  width: 60%;
+  margin: 60px 20% 0;
+}
+
+#frame-intro-pic {
+  overflow: hidden;
+  height: 500px;
+  background: transparent no-repeat center;
+  background-size: cover;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px 50px;
+  max-width: 1280px;
+}
+
+  #intro-pic {
+  overflow: hidden;
+  width: 1280px;
+}
+
+/* Content inside the section */
+article {
+  flex: 1;
+  padding: 0 16px;
+
+}
+
+/* Article item list marker*/
+article li::marker {
+  color: #81d8d0;
+  content: "○ ";
+  font-size: 1.1em;
 }
 
 /* First letter bigger colourfull and in evidence */
@@ -322,6 +398,7 @@ nav {
   background-color: #ffff;
   margin-left: auto;
   margin-right: auto;
+  z-index: 1;
 }
 
 nav i {
@@ -556,28 +633,27 @@ nav #nav li ul:not( :hover ) li.active a {
   border-radius: 30px;
 }
 
-/*Main Image Button Label*/
-.open-map {
-  color: #ffffff;
-  background-color: #000000;
-  margin-top: 300px;
-  padding: 10px 0;
-  width: 100%;
+.search-destination button:active{
+  background: #d4d4d4;
+  border-radius: 30px;
 }
 
-.open-map a {
-  color: #ffffff;
+/*Full Map Label*/
+.open-map {
+  font-size: 0.90rem;
+  padding: 20px;
+  text-align: right;
 }
 
 /* Map and Hotel List Responsive Table*/
   .table-responsive {
     border-collapse: collapse; 
-    width: 60%;
+    border-bottom: 2px solid #000000;
     padding: 40px 0; 
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width: 840px;
   }
   .table-responsive #total {
     text-decoration: none;
@@ -587,39 +663,106 @@ nav #nav li ul:not( :hover ) li.active a {
     margin: 50px 20%; 
     margin-bottom: 10px;
   }
-  .table-responsive td {
-    padding: 10px; 
-    border: 2px solid #ddd;
+  .table-responsive button {
+    min-width: none;
+    border-top: none;
   }
-  .table-responsive tr:nth-child(even) {
+  .table-responsive td #links{
+    padding: 10px; 
+  }
+/*  .table-responsive tr:nth-child(even) {
     background-color: #f2f2f2;
   }
+*/
   .table-responsive th {
-    border: 2px solid #ddd;
     width: 100px;
   }
   .table-responsive img {
-    min-width: 200px;
+    min-width: 30px;
+    max-height: 200px;
   }
   .table-responsive table {
     position: static;
     margin: 20px 0;
   }
-  .wrap-map {position:absolute; 
+  #hotel-list {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  #hotel-list p {
+    padding: 20px 0;
+  }
+  #hotel-list button {
+    background: #d4d4d4;
+    border-radius: 20px;
+    font-size: 14px;
+    float: center;
+    height: 40px;
+    width: 200px;
+    min-width: 100px;
+    color: #000000;
+    border-left: none;
+    cursor: pointer;
+  }
+  #hotel-list button:hover {
+    background: #81d8d0;
+    border-radius: 20px;
+  }
+  #hotel-list button:active{
+    background: #d4d4d4;
+    border-radius: 20px;
+  }
+  #hotel-list button:active{
+    background: #d4d4d4;
+    border-radius: 20px;
+  }
+  #big-icon{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  #font-tiny {
+    font-size: 0.7rem;
+    text-align: right;
+  }
+  #font-small {
+    font-size: 0.9rem;
+    text-align: right;
+  }
+  #font-bold {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: right;
+  }
+  #img-rating {
+    background-image:"images/rating.png";
+    max-width: 30px;
+    text-align: center;
+  }
+  .wrap-map {
     height: 400px; 
-    margin: 300px 20% 0;
+    margin: 200px 20% 0;
     border: 2px solid #000000;
+    z-index: 2;
   }
   #map {height: 400px; 
-    position:static; 
     top: 0; 
     right: 0; 
     bottom: 0; 
     left: 0;
+    z-index: 2;
+  }
+
+  #conveniences {
+    display: flex;
+    text-align: left;
+    width: 150px;
+    justify-content: space-between;
+    padding: 60px 0;
   }
 
 	/* Footer Style */
   footer {
+    position:absolute;
     background-color: #81d8d0;
     display: flex;
     flex-direction: column;

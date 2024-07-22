@@ -30,14 +30,34 @@
   circle.bindPopup("Galway");
 
   var marker = L.marker([53.34, -6.20]).addTo(map);
-  circle.bindPopup("Hotel Green");
+  marker.bindPopup("Hotel Green");
 
   var marker = L.marker([53.27, -9.10]).addTo(map);
-  circle.bindPopup("Hotel Red");
+  marker.bindPopup("Hotel Red");
 
   var marker = L.marker([53.27, -9.00]).addTo(map);
-  circle.bindPopup("Hotel Yellow");
+  marker.bindPopup("Hotel Yellow");
 
+  var points = [
+    ["Green", 53.34, -6.20, "../green"],
+    ["Red", 53.27, -9.10, "../red"],
+    ["Yellow", 53.27, -9.00, "../yellow"]
+  ];
+
+  var marker = [];
+  var i;
+    for (i = 0; i < points.length; i++) {
+      marker[i] = new L.Marker([points[i][1], points[i][2]], {
+        win_url: points[i][3]
+      });
+      marker[i].addTo(map);
+      marker[i].on('click', onClick);
+    };
+  
+function onClick(e) {
+  console.log(this.options.win_url);
+  window.open(this.options.win_url);
+}
 </script>
 
 <script>

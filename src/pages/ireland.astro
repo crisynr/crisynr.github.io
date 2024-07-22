@@ -11,8 +11,9 @@ const description = "IRELAND";
         <div class="wrap-map" id="map">
             <Map client:load/>
         </div>
-        <!-- Calculate total of found Hotels in this destination -->
-        <div class="table-responsive">
+
+        <div class="table table-responsive" id="hotel-list">
+            <!-- Calculate total of found Hotels in this destination -->
             <script>
                 let y = "IRELAND";
                 let x = document.getElementById("destination").options.length;
@@ -20,16 +21,21 @@ const description = "IRELAND";
             </script>
         
             <datalist id="destination">
-                <option value="Hotel 1"><a href="../hotel1">Hotel 1</a></option>
-                <option value="Hotel 2"><a href="../hotel2">Hotel 2</a></option>
-                <option value="Hotel 3"><a href="../hotel3">Hotel 3</a></option>
+                <option value="Dublin, Ireland"><img src="green-room.png"><a href="../green">HOTEL GREEN</a></option>
+                <option value="Galway, Ireland"><a href="../red">HOTEL RED</a></option>
+                <option value="Galway, Ireland"><a href="../yellow">HOTEL YELLOW</a></option>
             </datalist>
-            
-            <table>
-                <i class="fa-solid fa-home"></i><span id="total" myFunction()>
-            </table>
-        
-            <table>
+
+            <div>
+                The destination's datalist includes:
+                <ul id="list">
+                <script>
+                let html = document.getElementById("destination").innerHTML;
+                document.getElementById("list").innerHTML = html;
+                </script>
+            </div>
+
+            <table class="table table-responsive" id="hotel-list">
                 <!--
                 <thead>
                     <tr>
@@ -38,34 +44,172 @@ const description = "IRELAND";
                     </tr>
                 </thead>
                 -->
-                <tbody>
+                <th colspan="6"> <i class="fa-solid fa-home"></i><span id="total" myFunction()>
+                </th>
+                <!-- Hotel 1 -->
                     <tr>
-                        <td><img src="images/green-room.png"></td>
-                        <td>Dublin, Ireland <br> HOTEL GREEN <br> Hotel Green is a stylish and modern hotel located 
+                        <!-- Column with picture -->
+                        <td rowspan="3"><img src="images/green-room.png"></td>
+                        <!-- Column with hotel info -->
+                        <td> <i class="fa-solid fa-location-pin"></i> Dublin, Ireland <br><br> HOTEL GREEN 
+                            <br>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <br id="conveniences"> 
+                            <i class="fas fa-swimming-pool"></i>
+                            <i class="fa-solid fa-plane"></i> 
+                            <i class="fa-solid fa-umbrella-beach"></i>
+                            <i class="fa-solid fa-utensils"></i>
+                        <!-- Column with description -->  
+                        <!--<br> Hotel Green is a stylish and modern hotel located 
                         in the heart of Dublin, Ireland. The hotel boasts 138 luxurious rooms and suites, each equipped with comfortable beds, 
                         flat-screen TVs, and complimentary Wi-Fi. Guests can enjoy stunning views of the city from many 
-                        of the rooms, and amenities include a 24-hour fitness center, spa, and business center.</td>
+                        of the rooms, and amenities include a 24-hour fitness center, spa, and business center.
+                        -->
+                        <td>                         
+                            <table>
+                                <tr>
+                                    <td id="font-small"> Rating </td>
+                                    <td rowspan="2">&nbsp </td>
+                                    <td rowspan="2" id="img-rating"> 9.0 &nbsp</td>
+                                </tr>    
+                                    <td id="font-tiny"> 1.000 Reviews </td>
+                                </tr>
+                                <tr></tr>
+                                <tr id="font-small">
+                                    <td colspan="3"> From <br><span id="font-bold"> EUR 100.00 </span><br>per night<br><br>
+                                </tr>
+                            </table>   
+                            <tr colspan="3">
+                                <td colspan="2">                                
+                                    <button> VIEW RATES</button>
+                                </td>                                      
+                            </tr>
+                        </td>
                     </tr>
                     <tr>
-                        <td><img src="images/pool.png"></td>
-                        <td>Galway, Ireland <br> HOTEL RED <br> Hotel Red is a boutique hotel located in the heart of Galway City, 
+                    <!-- Hotel 2 -->
+                    <tr>
+                    <!-- Column with picture -->
+
+                        <td rowspan="3"><img src="images/pool.png"></td>
+                        <td><i class="fa-solid fa-location-pin"></i> Galway, Ireland <br><br> HOTEL RED 
+                        <!--<br> Hotel Red is a boutique hotel located in the heart of Galway City, 
                         Ireland's vibrant cultural hub. The hotel's 40 rooms and suites are designed to provide a unique and intimate
                         experience. The hotel is also close to many of Galway's top attractions,
-                            including the Latin Quarter, Eyre Square, and the famous Salthill Promenade. 
-                        With its stunning architecture, lively atmosphere, and warm hospitality, Hotel Red is the perfect place to experience the charm of Galway City.</td>
-                    </tr>
+                        including the Latin Quarter, Eyre Square, and the famous Salthill Promenade. 
+                        With its stunning architecture, lively atmosphere, and warm hospitality, Hotel Red is the perfect place to experience the charm of Galway City.
+                        -->
+                        <br>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        <br id="conveniences"> 
+                            <i class="fas fa-swimming-pool"></i>
+                            <i class="fa-solid fa-plane"></i> 
+                            <i class="fa-solid fa-umbrella-beach"></i>
+                            <i class="fa-solid fa-utensils"></i>
+                        </td>
+                    </td>
+                    <td>   
+                        <table>
+                            <tr>
+                                <td id="font-small"> Rating </td>
+                                <td rowspan="2">  </td>
+                                <td rowspan="2" id="img-rating"> 9.0 </td>
+                            </tr>    
+                                <td id="font-tiny"> 1.000 Reviews </td>
+                            </tr>
+                            <tr></tr>
+                            <tr id="font-small">
+                                <td colspan="3"> From <br><span id="font-bold"> EUR 100.00 </span><br>per night<br><br>
+                            </tr>
+                   
+                        </table>   
+                        <tr colspan="3">
+                            <td colspan="2">                                
+                                <button> VIEW RATES</button>
+                            </td>                                      
+                        </tr>
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <!-- Hotel 3 -->
                     <tr>
-                        <td><img src="images/yellow-room.png"></td>
-                        <td>Galway, Ireland <br> HOTEL YELLOW <br> Hotel Yellow is a charming boutique hotel located in the heart of 
+                        <td rowspan="3"><img src="images/yellow-room.png"></td>
+                        <td><i class="fa-solid fa-location-pin"></i> Galway, Ireland <br><br> HOTEL YELLOW 
+                        <!--<br> Hotel Yellow is a charming boutique hotel located in the heart of 
                         Galway City, Ireland, within walking distance to many of the city's top attractions. The hotel's 20 stylish 
                         rooms and suites are decorated with a vibrant yellow color scheme and feature luxurious amenities such as 
                         plush beds, flat-screen TVs, and complimentary Wi-Fi. Guests can enjoy a
                         delicious breakfast in the hotel's cozy breakfast room, or relax in the hotel's comfortable lounge area 
-                        with a cup of coffee or a glass of wine. </td>
+                        with a cup of coffee or a glass of wine. 
+                        -->
+                        <br>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    <br id="conveniences"> 
+                        <i class="fas fa-swimming-pool"></i>
+                        <i class="fa-solid fa-plane"></i> 
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                        <i class="fa-solid fa-utensils"></i>
+                    </td>
+                    <td>   
+                        <table>
+                            <tr>
+                                <td id="font-small"> Rating </td>
+                                <td rowspan="2">  </td>
+                                <td rowspan="2" id="img-rating"> 9.0 </td>
+                            </tr>    
+                                <td id="font-tiny"> 1.000 Reviews </td>
+                            </tr>
+                            <tr></tr>
+                            <tr id="font-small">
+                                <td colspan="3"> From <br><span id="font-bold"> EUR 100.00 </span><br>per night<br><br>
+                                </tr>
+
+                            </table>   
+                            <tr colspan="3">
+                                <td colspan="2">                                
+                                    <button> VIEW RATES</button>
+                                </td>                                      
+                            </tr>
+                        </td>
                     </tr>
+                    <tr>
+                    <tr>
                 </tbody>
             </table>
         </div>
+
+        <div class="frame">
+            <h1>Hotel in Ireland </h1>
+          
+            <div>
+            <button onclick="hotelList()" style="margin:0 0 20px"> Button </button>
+            </div>
+          
+            <iframe id="hotel-frame" src="../test" style="height:600px;width:90%;margin-left:5%"></iframe>
+          
+            <script>
+            function hotelList() {
+              const frame = document.getElementById("hotelFrame");
+              const h1 = frame.contentWindow.document.getElementsByTagName("H1")[0];
+              const node = document.adoptNode(h1);
+              document.body.appendChild(node);
+            }
+            </script>
+          </div>
+
     </main>
 </Layout>
 

@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Search from '../components/Search.astro';  
+
+const title = "H O T E L by N A K A T A";
+const description = "HOMEPAGE";
+---
+
+<Layout description={description} title={title}>
+<!--Main-->
+<main>
+    <div id="frame-intro-pic">
+        <img src="../images/intro-owner.jpg" id="intro-pic"></img>
+    </div>
+    <section id="section-box">
+        <article>
+            <p class="first-letter"> H O T E L was founded in 1922 by entrepreneur and hospitality pioneer, Sophia Patel, who had a passion for providing exceptional service and creating unforgettable experiences for her guests. Starting with a small boutique hotel in the heart of Ireland, Dublin, Sophia's vision was to craft a chain of hotels that would cater to the growing number of international travelers seeking comfort, luxury, and warmth. Over the years, H O T E L expanded to major cities worldwide, introducing innovative amenities, sustainable practices, and culturally rich programming to its properties. Today, with over 100 hotels across continents, H O T E L remains a beloved institution in the hospitality industry, known for its commitment to exceptional guest experiences, community engagement, and environmental stewardship.</p>
+        </article>
+        <article>
+            <p class="first-letter">
+                A mission-driven hotel company that prioritizes authenticity, community, and sustainability. Our mission is to create unforgettable experiences that foster meaningful connections between people and places. We value:
+                <li>Authenticity: We believe that every guest is seeking a genuine connection to the local culture and community. We strive to authentically reflect the character of each destination in every aspect of our hotels, from design to service.</li> 
+                <li>Community: We prioritize building strong relationships with local partners, suppliers, and neighbors to create a positive impact on the community and support its growth.</li>
+                <li>Sustainability: We are committed to reducing our environmental footprint by implementing eco-friendly practices, reducing waste, and promoting sustainable tourism. </li> 
+                </ul>
+        </article>
+
+    </section>
+    
+</main>
+</Layout>

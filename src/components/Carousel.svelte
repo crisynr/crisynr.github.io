@@ -1,0 +1,29 @@
+<div id="bg-carousel" class="carousel slide" data-ride="carousel" >
+    <div class="carousel-inner" data-interval="200">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="../images/bg-01.png" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+            <a href="../ireland"><i class="fa-solid fa-map"></i> Visit Ireland </a>
+            <p>Rolling hills, cloaked in emerald grasses, stretch as far as the eye can see. 
+                Vibrant moss-covered rocks, dense forests, and expansive 
+                meadows create a mesmerizing mosaic of greenery, 
+                earning Ireland its title as the Emerald Isle.
+            </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../images/bg-02.png" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../images/bg-03.png" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#bg-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#bg-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>

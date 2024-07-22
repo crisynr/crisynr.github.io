@@ -1,29 +1,26 @@
 <!--Search Destination Box-->
 <div class="search-destination">  
   <p style="text-align: center;"><i class="fa fa-map-marker" aria-hidden="true"></i><br>WHERE ARE YOU GOING?</p>
-  <input id="destination-input" list="destination" type="text" autocomplete="on" required="" placeholder="Choose your destination">
-  <button type="submit" onclick="document.getElementById('destination-input').addEventListener('change', function() {const selectedValue = this.value; window.location.href = selectedValue;}"><i class="fa-solid fa-magnifying-glass"></i></button> 
-    <datalist id="destination">
-      <option>Brazil</option>
-      <option>Ireland</option>
-      <option>Japan</option>
-      <option>Portugal</option>
-    </datalist>
-  </input>
+    <input id="destination-input" list="destination" type="text" required="" placeholder="Choose your destination">
+      <datalist id="destination" >
+        <option><a href="geo:-14.24,-53.18">Brazil</a></option>
+        <option><a href="geo:52.86,-7.97;">Ireland</a></option>
+        <option><a href="geo:36.57,139.23">Japan</a></option>
+        <option><a href="geo:39.66,-8.135">Portugal</a></option>
+      </datalist>
+    </input>
+  <!--See Full Map-->
+  <div class="open-map"> See full map 
+    <button onclick="document.location='../hotel_all'">
+      <i class="fa-regular fa-map" aria-hidden="true"></i>
+    </buton>
+  </div>
 </div>
 
-
-
-
-
-<!--Search Destination JS-->
-<div class="open-map">
-  Visit Ireland <button onclick="document.location='../ireland'"><i class="fa-regular fa-map" aria-hidden="true"></i></buton>
-
-
-<!--Geolocation Notes:             
-<option value="Brazil"><a href="geo:-14.24,-53.18">Brazil</a></option>
-<option value="Ireland"><a href="geo:52.86,-7.97;">Ireland</a></option>
-<option value="Japan"><a href="geo:36.57,139.23">Japan</a></option>
-<option value="Portugal"><a href="geo:39.66,-8.135">Portugal</a></option>
--->
+<script>
+ document.getElementById('destination-input').addEventListener('change', function() {
+    console.log("change event", this.value);
+    const selectedValue = this.value;
+    window.location.href = selectedValue;
+  });
+</script>
