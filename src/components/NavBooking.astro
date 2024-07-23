@@ -1,0 +1,38 @@
+<!--NavBar with items for specific search-->
+
+<script>
+    /* Toggle between adding and removing the "responsive" class to navbar when the user clicks on the menu icon */
+    function ChangeNavbar() {
+      var x = document.getElementById("nav-vertical");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+    </script>
+    
+    <nav>
+      <div id="nav" role="navigation">
+        <a href="#nav" title="Show navigation">Show navigation</a>
+        <a href="#" title="Hide navigation">Hide navigation</a>
+        <ul>
+            <li>
+                <a href="/"><i class="fa-regular fa-building"></i> DESTINATIONS </a>      
+           </li>
+            <li><a href="/"><i class="fa-regular fa-calendar" aria-hidden="true"></i> DATES </a></li>
+              <ul>
+                <li><a href="/">MONTH</a></li>
+                <li><a href="/">CALENDAR</a></li>
+                <li><a href="/">Select</a></li>
+              </ul>
+            <li><a href="/" aria-haspopup="true"><span><i class="fa-regular fa-user" aria-hidden="true"> </i> TRAVELLERS </a>
+                <ul>
+                    <li><a href="/">ADULTS</a></li>
+                    <li><a href="/">CHILDREN</a></li>
+                    <li><a href="/">Select</a></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+    </nav>
