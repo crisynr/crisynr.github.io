@@ -1,4 +1,4 @@
-<!--NavBar with items for specific search-->
+<!--NavBar-->
 
 <script>
   /* Toggle between adding and removing the "responsive" class to navbar when the user clicks on the menu icon */
@@ -16,16 +16,17 @@
     <div id="nav" role="navigation">
       <a href="#nav" title="Show navigation">Show navigation</a>
       <a href="#" title="Hide navigation">Hide navigation</a>
-    <ul class="navbar">
+    <ul>  
+      <li class="logo">
         <a href="../about_us"><img src="../images/logo.png"></a>
-
-      <li class="nav-item">
-        <a href="/"><i class="fa-solid fa-globe"></i> ENGLISH</a>
+      </li>
+      <li class="nav-item" id="none-mobile">
+        <a href="/"><i class="fa-solid fa-globe" aria-hidden="true"></i> ENGLISH</a>
       </li>
       <li class="nav-item">
-        <a href="/"><i class="fa-regular fa-calendar" aria-hidden="true"></i> MY BOOKINGS</a>
+        <a href="../booking"><i class="fa-regular fa-calendar" aria-hidden="true"></i> MY BOOKINGS</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="none-mobile">
         <a href="/"><i class="fa-regular fa-user" aria-hidden="true"></i> SIGN IN</a>
       </li>
     </ul>

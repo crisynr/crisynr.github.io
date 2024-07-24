@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/LayoutBasic.astro';
+import Layout from '../layouts/LayoutClean.astro';
 
 const title = "H O T E L by N A K A T A";
 const description = "IRELAND";
@@ -39,11 +39,11 @@ const description = "IRELAND";
                 <th colspan="6"> <i class="fa-solid fa-home"></i><span id="total" myFunction()>
                 </th>
                 <!-- Hotel 1 -->
-                    <tr>
+                <tr id="none">
                         <!-- Column with picture -->
-                        <td rowspan="3"><img src="images/green-room.png"></td>
+                        <td id="line" rowspan="3"><img src="images/green-room.png"></td>
                         <!-- Column with hotel info -->
-                        <td id="none"> <i class="fa-solid fa-location-pin"></i> Dublin, Ireland <br><br> HOTEL GREEN 
+                        <td><br><br><i class="fa-solid fa-location-pin"></i> Dublin, Ireland <br><br> HOTEL GREEN 
                             <br>
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
@@ -61,12 +61,12 @@ const description = "IRELAND";
                         flat-screen TVs, and complimentary Wi-Fi. Guests can enjoy stunning views of the city from many 
                         of the rooms, and amenities include a 24-hour fitness center, spa, and business center.
                         -->
-                        <td id="none">                         
+                        <td>                         
                             <table >
                                 <tr>
                                     <td id="font-small"> Rating </td>
                                     <td rowspan="2">&nbsp </td>
-                                    <td rowspan="2" id="img-rating"> 9.0 &nbsp</td>
+                                    <td rowspan="2" id="img-rating">&nbsp 9.0 </td>
                                 </tr>    
                                     <td id="font-tiny"> 1.000 Reviews </td>
                             
@@ -74,7 +74,7 @@ const description = "IRELAND";
                                     <td colspan="3"> From <br><span id="font-bold"> EUR 100.00 </span><br>per night<br><br>
                                 </tr>
                             </table>   
-                            <tr colspan="3" >
+                            <tr id="line" colspan="3" >
                                 <td colspan="2" >                                
                                     <button><a href="../hotel_list_rates" target="_parent">VIEW RATES</a></button>                                </td>                                      
                             </tr>
@@ -82,11 +82,10 @@ const description = "IRELAND";
                     </tr>
                     <tr>
                     <!-- Hotel 2 -->
-                    <tr>
+                    <tr id="none">
                     <!-- Column with picture -->
-
-                        <td rowspan="3"><img src="images/pool.png"></td>
-                        <td id="none"><i class="fa-solid fa-location-pin"></i> Galway, Ireland <br><br> HOTEL RED 
+                        <td id="line" rowspan="3"><img src="images/pool.png"></td>
+                        <td><br><br><i class="fa-solid fa-location-pin"></i> Galway, Ireland <br><br> HOTEL RED 
                         <!--<br> Hotel Red is a boutique hotel located in the heart of Galway City, 
                         Ireland's vibrant cultural hub. The hotel's 40 rooms and suites are designed to provide a unique and intimate
                         experience. The hotel is also close to many of Galway's top attractions,
@@ -106,22 +105,21 @@ const description = "IRELAND";
                             <i class="fa-solid fa-utensils"></i>
                         </td>
                     </td>
-                    <td id="none">   
+                    <td>   
                         <table>
                             <tr>
                                 <td id="font-small"> Rating </td>
                                 <td rowspan="2">  </td>
-                                <td rowspan="2" id="img-rating"> 9.0 </td>
+                                <td rowspan="2" id="img-rating">&nbsp 9.0 </td>
                             </tr>    
                                 <td id="font-tiny"> 1.000 Reviews </td>
                             </tr>
                             <tr></tr>
                             <tr id="font-small">
                                 <td colspan="3"> From <br><span id="font-bold"> EUR 100.00 </span><br>per night<br><br>
-                            </tr>
-                   
+                            </tr>               
                         </table>   
-                        <tr colspan="3">
+                        <tr id="line" colspan="3">
                             <td colspan="2">                                
                                 <button><a href="../hotel_list_rates">VIEW RATES</a></button>
                             </td>                                      
@@ -131,9 +129,9 @@ const description = "IRELAND";
                 <tr>
                 <tr>
                     <!-- Hotel 3 -->
-                    <tr>
-                        <td rowspan="3"><img src="images/yellow-room.png"></td>
-                        <td id="none"><i class="fa-solid fa-location-pin"></i> Galway, Ireland <br><br> HOTEL YELLOW 
+                    <tr id="none">
+                        <td id="line" rowspan="3"><img src="images/yellow-room.png"></td>
+                        <td><br><br><i class="fa-solid fa-location-pin"></i> Galway, Ireland <br><br> HOTEL YELLOW 
                         <!--<br> Hotel Yellow is a charming boutique hotel located in the heart of 
                         Galway City, Ireland, within walking distance to many of the city's top attractions. The hotel's 20 stylish 
                         rooms and suites are decorated with a vibrant yellow color scheme and feature luxurious amenities such as 
@@ -153,12 +151,12 @@ const description = "IRELAND";
                         <i class="fa-solid fa-umbrella-beach"></i>
                         <i class="fa-solid fa-utensils"></i>
                     </td>
-                    <td id="none">   
+                    <td>   
                         <table>
                             <tr>
                                 <td id="font-small"> Rating </td>
                                 <td rowspan="2">  </td>
-                                <td rowspan="2" id="img-rating"> 9.0 </td>
+                                <td rowspan="2" id="img-rating">&nbsp 9.0 </td>
                             </tr>    
                                 <td id="font-tiny"> 1.000 Reviews </td>
                             </tr>
@@ -168,7 +166,7 @@ const description = "IRELAND";
                                 </tr>
 
                             </table>   
-                            <tr colspan="3">
+                            <tr id="line" colspan="3">
                                 <td colspan="2">                                
                                     <button><a href="../hotel_list_rates">VIEW RATES</a></button>                                </td>                                      
                             </tr>

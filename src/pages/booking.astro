@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/LayoutBooking.astro';
+import Map from '../components/MapAll.astro';
+import NavBooking from '../components/NavBooking.astro';
+
+const title = "H O T E L by N A K A T A";
+const description = "IRELAND";
+---
+
+<Layout description={description} title={title}>
+    <main class="booking_page">
+        <div class="wrap-booking" id="booking">
+            <NavBooking />
+        </div>
+        <div class="wrap-map-booking" id="map">
+            <Map />
+        </div>
+        <div >         
+            <iframe id="frame-list" src="../hotel_list"></iframe>
+        </div>
+    </main>
+</Layout>
+
