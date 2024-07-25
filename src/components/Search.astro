@@ -11,7 +11,7 @@
     </input>
   <!--See Full Map-->
   <div class="open-map"> See full map 
-    <button onclick="document.location='../hotel_all'">
+    <button onclick="document.location='../hotel-all'">
       <i class="fa-regular fa-map" aria-hidden="true"></i>
     </buton>
   </div>
@@ -21,6 +21,7 @@
  document.getElementById('destination-input').addEventListener('change', function() {
     console.log("change event", this.value);
     const selectedValue = this.value;
-    window.location.href = selectedValue;
+    let place = selectedValue.toLowerCase();
+    window.location.href = "../hotel-" + place;
   });
 </script>

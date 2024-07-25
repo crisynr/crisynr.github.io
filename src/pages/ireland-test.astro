@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Map from '../components/MapIE.astro';
+import Layout from '../layouts/LayoutMap.astro';
+import Map from '../components/MapIreland.astro';
 
 const title = "H O T E L by N A K A T A";
 const description = "IRELAND";
@@ -11,7 +11,6 @@ const description = "IRELAND";
         <div class="wrap-map" id="map">
             <Map client:load/>
         </div>
-
         <div class="table table-responsive" id="hotel-list">
             <!-- Calculate total of found Hotels in this destination -->
             <script>
@@ -27,6 +26,8 @@ const description = "IRELAND";
             </datalist>
 
             <div>
+                !! UNDERCONSTRUCTION !!
+                <br>
                 The destination's datalist includes:
                 <ul id="list">
                 <script>

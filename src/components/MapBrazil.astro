@@ -9,14 +9,12 @@
 </script>
 
 <script>
-  var map = L.map('map').setView([0,0], 1);
-  //TileLayer - Map Panes
+  var map = L.map('map').setView([-14.24,-53.18], 3);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
-
-  //Circles
+  
   var circle = L.circle([53.34, -6.26], { 
   color: 'purple',
   fillColor: 'none',
@@ -31,12 +29,21 @@
   }).addTo(map);
   circle.bindPopup("Galway");
 
-  //Markers and Popups with link
+  var marker = L.marker([53.34, -6.20]).addTo(map);
+  marker.bindPopup("Hotel Green");
+
+  var marker = L.marker([53.27, -9.10]).addTo(map);
+  marker.bindPopup("Hotel Red");
+
+  var marker = L.marker([53.27, -9.00]).addTo(map);
+  marker.bindPopup("Hotel Yellow");
+
   var points = [
-    ["Hotel Green", 53.34, -6.80, "../hotel-green"],
-    ["Hotel Red", 53.27, -9.10, "../hotel-red"],
-    ["Hotel Yellow", 53.27, -9.00, "../hotel-yellow"]
+    ["Green", 53.34, -6.20, "../green"],
+    ["Red", 53.27, -9.10, "../red"],
+    ["Yellow", 53.27, -9.00, "../yellow"]
   ];
+
   var marker = [];
   var i;
     for (i = 0; i < points.length; i++) {
@@ -44,7 +51,6 @@
         win_url: points[i][3]
       });
       marker[i].addTo(map);
-      marker[i].labels();
       marker[i].on('click', onClick);
     };
   

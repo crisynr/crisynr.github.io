@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/LayoutMap.astro';
+import Map from '../components/MapIreland.astro';
+
+const title = "H O T E L by N A K A T A";
+const description = "IRELAND";
+---
+
+<Layout description={description} title={title}>
+    <main>
+        <div class="wrap-map" id="map">
+            <Map />
+        </div>
+
+        <div >         
+            <iframe id="frame-list" src="../hotel-ireland-list"></iframe>
+        </div>
+
+    </main>
+</Layout>
+
