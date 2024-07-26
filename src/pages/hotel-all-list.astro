@@ -11,15 +11,17 @@ const description = "IRELAND";
         <div class="table table-responsive" id="hotel-list">
             <!-- Calculate total of found Hotels in this destination -->
             <script>
-                let y = "IRELAND";
+                let y = "EUROPE, ASIA AND AMERICA";
                 let x = document.getElementById("destination").options.length;
-                document.getElementById("total").innerHTML = " HOTEL IN " + y + " *Found total of  " + x + "properties" ;
+                document.getElementById("total").innerHTML = " HOTEL IN " + y + " *Found total of  " + x + " properties" ;
             </script>
         
             <datalist id="destination">
-                <option value="Dublin, Ireland"><a href="../green">HOTEL GREEN</a></option>
-                <option value="Galway, Ireland"><a href="../red">HOTEL RED</a></option>
-                <option value="Galway, Ireland"><a href="../yellow">HOTEL YELLOW</a></option>
+                <option value="Dublin, Ireland"><a href="/">HOTEL GREEN</a></option>
+                <option value="Galway, Ireland"><a href="/">HOTEL RED</a></option>
+                <option value="Sao Paulo, Brazil"><a href="/">HOTEL YELLOW</a></option>
+                <option value="Osaka, Japan"><a href="/">HOTEL WHITE</a></option>
+                <option value="Tokyo, Japan"><a href="/">HOTEL BLACK</a></option>
             </datalist>
 
             <script>
@@ -58,11 +60,6 @@ const description = "IRELAND";
                             <i class="fa-solid fa-umbrella-beach"></i>
                             <i class="fa-solid fa-utensils"></i>
                         <!-- Column with description -->  
-                        <!--<br> Hotel Green is a stylish and modern hotel located 
-                        in the heart of Dublin, Ireland. The hotel boasts 138 luxurious rooms and suites, each equipped with comfortable beds, 
-                        flat-screen TVs, and complimentary Wi-Fi. Guests can enjoy stunning views of the city from many 
-                        of the rooms, and amenities include a 24-hour fitness center, spa, and business center.
-                        -->
                         <td>                         
                             <table>
                                 <tr>
@@ -91,12 +88,6 @@ const description = "IRELAND";
                         <td>
                             <p><i class="fa-solid fa-location-pin"></i> Galway, Ireland 
                             <br> HOTEL RED 
-                            <!--<br> Hotel Red is a boutique hotel located in the heart of Galway City, 
-                            Ireland's vibrant cultural hub. The hotel's 40 rooms and suites are designed to provide a unique and intimate
-                            experience. The hotel is also close to many of Galway's top attractions,
-                            including the Latin Quarter, Eyre Square, and the famous Salthill Promenade. 
-                            With its stunning architecture, lively atmosphere, and warm hospitality, Hotel Red is the perfect place to experience the charm of Galway City.
-                            -->
                             <br>
                                 <i class="fa-regular fa-star"></i>
                                 <i class="fa-regular fa-star"></i>
@@ -139,13 +130,6 @@ const description = "IRELAND";
                         <td>
                             <p><i class="fa-solid fa-location-pin"></i> Galway, Ireland 
                                 <br> HOTEL YELLOW 
-                            <!--<br> Hotel Yellow is a charming boutique hotel located in the heart of 
-                            Galway City, Ireland, within walking distance to many of the city's top attractions. The hotel's 20 stylish 
-                            rooms and suites are decorated with a vibrant yellow color scheme and feature luxurious amenities such as 
-                            plush beds, flat-screen TVs, and complimentary Wi-Fi. Guests can enjoy a
-                            delicious breakfast in the hotel's cozy breakfast room, or relax in the hotel's comfortable lounge area 
-                            with a cup of coffee or a glass of wine. 
-                            -->
                             <br>
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
@@ -180,6 +164,138 @@ const description = "IRELAND";
                     </tr>
                     <tr>
                     <tr>
+                <!-- Hotel 4 -->
+                <tr id="none">
+                    <!-- Column with picture -->
+                    <td id="line" rowspan="3"><img src="images/green-room.png"></td>
+                    <!-- Column with hotel info -->
+                    <td>
+                        <p><i class="fa-solid fa-location-pin"></i> Dublin, Ireland 
+                        <br> HOTEL BLUE
+                        <br>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <br id="conveniences"> 
+                        <i class="fas fa-swimming-pool"></i>
+                        <i class="fa-solid fa-plane"></i> 
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                        <i class="fa-solid fa-utensils"></i>
+                    <!-- Column with description -->  
+                    <td>                         
+                        <table>
+                            <tr>
+                                <td id="font-small"> Rating </td>
+                                <td rowspan="2">  </td>
+                                <td rowspan="2" id="img-rating">&nbsp 9.0 </td>
+                            </tr>    
+                                <td id="font-tiny"> 1.000 Reviews </td>
+                            </tr>
+                            <tr id="font-small">
+                                <td colspan="3"> 
+                                    <br><br>From<br><span id="font-bold"> EUR 100.00 </span><br>per night<br>
+                                </tr>
+                            </table>     
+                        <tr id="line" colspan="3" >
+                            <td colspan="2" >                                
+                                <button><a href="../hotel-rates">VIEW RATES</a></button>  
+                            </td>                                                     
+                        </tr>
+                    </td>
+                </td>
+            </tr>
+            <tr>
+            <tr>
+
+                                 <!-- Hotel 5 -->
+                                 <tr id="none">
+                                    <!-- Column with picture -->
+                                    <td id="line" rowspan="3"><img src="images/green-room.png"></td>
+                                    <!-- Column with hotel info -->
+                                    <td>
+                                        <p><i class="fa-solid fa-location-pin"></i> Osaka, Japan 
+                                        <br> HOTEL WHITE 
+                                        <br>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <br id="conveniences"> 
+                                        <i class="fas fa-swimming-pool"></i>
+                                        <i class="fa-solid fa-plane"></i> 
+                                        <i class="fa-solid fa-umbrella-beach"></i>
+                                        <i class="fa-solid fa-utensils"></i>
+                                    <!-- Column with description -->  
+                                    <td>                         
+                                        <table>
+                                            <tr>
+                                                <td id="font-small"> Rating </td>
+                                                <td rowspan="2">  </td>
+                                                <td rowspan="2" id="img-rating">&nbsp 9.0 </td>
+                                            </tr>    
+                                                <td id="font-tiny"> 1.000 Reviews </td>
+                                            </tr>
+                                            <tr id="font-small">
+                                                <td colspan="3"> 
+                                                    <br><br>From<br><span id="font-bold"> EUR 100.00 </span><br>per night<br>
+                                                </tr>
+                                            </table>     
+                                        <tr id="line" colspan="3" >
+                                            <td colspan="2" >                                
+                                                <button><a href="../hotel-rates">VIEW RATES</a></button>                                </td>                                      
+                                        </tr>
+                                    </td>
+                                </tr>
+                                <tr>
+                                <!-- Hotel 6 -->
+                                <tr id="none">
+                                <!-- Column with picture -->
+                                    <td id="line" rowspan="3"><img src="images/pool.png"></td>
+                                    <td>
+                                        <p><i class="fa-solid fa-location-pin"></i> Tokyo, Japan
+                                        <br> HOTEL BLACK
+                                    <!-- Column with description -->  
+                                        <br>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        <br id="conveniences"> 
+                                            <i class="fas fa-swimming-pool"></i>
+                                            <i class="fa-solid fa-plane"></i> 
+                                            <i class="fa-solid fa-umbrella-beach"></i>
+                                            <i class="fa-solid fa-utensils"></i>
+                                    </td>
+                                </td>
+                                <td>   
+                                    <table>
+                                        <tr>
+                                            <td id="font-small"> Rating </td>
+                                            <td rowspan="2">  </td>
+                                            <td rowspan="2" id="img-rating">&nbsp 9.0 </td>
+                                        </tr>    
+                                            <td id="font-tiny"> 1.000 Reviews </td>
+                                        </tr>
+                                        <tr id="font-small">
+                                            <td colspan="3"> 
+                                                <br><br>From<br><span id="font-bold"> EUR 100.00 </span><br>per night<br>
+                                            </tr>
+                                        </table>    
+                                    <tr id="line" colspan="3">
+                                        <td colspan="2">                                
+                                            <button><a href="../hotel-rates">VIEW RATES</a></button>                                </td>                                      
+                                        </td>                                      
+                                    </tr>
+                                </td>
+                            </tr>
+                            <tr>
+                            <tr>
+
+
                 </tbody>
             </table>
         </div>

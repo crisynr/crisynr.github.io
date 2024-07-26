@@ -1,12 +1,11 @@
 <!--Search Destination Box-->
 <div class="search-destination">  
   <p style="text-align: center;"><i class="fa fa-map-marker" aria-hidden="true"></i><br>WHERE ARE YOU GOING?</p>
-    <input id="destination-input" list="destination" type="text" required="" placeholder="Choose your destination">
+    <input id="destination-input" list="destination" type="text" autocomplete="off" placeholder="Choose your destination" required minlength="1" maxlength="20" size="20">
       <datalist id="destination" >
         <option><a href="geo:-14.24,-53.18">Brazil</a></option>
         <option><a href="geo:52.86,-7.97;">Ireland</a></option>
         <option><a href="geo:36.57,139.23">Japan</a></option>
-        <option><a href="geo:39.66,-8.135">Portugal</a></option>
       </datalist>
     </input>
   <!--See Full Map-->

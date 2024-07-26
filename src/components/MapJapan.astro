@@ -1,12 +1,7 @@
----
-import {crs} from '../data/MapIrelandHeritage.geojson';
-import json from '../data/MapIrelandRailwayStations.geojson';
----
-
 <!--My API Key-->
 <script>
   const key = 'hhyINLMnMg5pSBBIII0T';
-  const map = L.map('map').setView([53.34, -7], 6); //starting position
+  const map = L.map('map').setView([36.57,139.23], 6); //starting position
   const mtLayer = L.maptilerLayer({
     apiKey: key,
     style: "63c60a0d-9669-4cb8-84ec-4fe500d50d8c", 
@@ -25,10 +20,10 @@ import json from '../data/MapIrelandRailwayStations.geojson';
   });
 </script>
 
-<!--Map Ireland Position and Markers-->
+<!--Map Position and Markers-->
 <script>
   //Map Leaflet Ireland Centered
-  var map = L.map('map').setView([-14.24,-53.18], 3);
+  var map = L.map('map').setView([36.57,139.23], 4);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -39,6 +34,8 @@ import json from '../data/MapIrelandRailwayStations.geojson';
     ["Hotel Red", 53.27, -9.10, "/"],
     ["Hotel Yellow", 53.27, -9.00, "/"],
     ["Hotel Blue", -23.53, -46.62, "/"],
+    ["Hotel White", 34.69, 135.50, "/"],
+    ["Hotel Black", 35.67, 139.25, "/"],
   ];
   var marker = [];
   var i;

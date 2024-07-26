@@ -1,4 +1,4 @@
-<!--Map IE - Ireland-->
+<!--My API Key-->
 <script>
   const key = 'hhyINLMnMg5pSBBIII0T';
   const map = L.map('map').setView([53.34, -7], 6); //starting position
@@ -8,52 +8,7 @@
   }).addTo(map);
 </script>
 
-<script>
-  var map = L.map('map').setView([0,0], 1);
-  //TileLayer - Map Panes
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
-
-  //Circles
-  var circle = L.circle([53.34, -6.26], { 
-  color: 'purple',
-  fillColor: 'none',
-  radius: 50000,
-  }).addTo(map);
-  circle.bindPopup("Dublin");
-  
-  var circle = L.circle([53.27, -9.05], {
-  color: 'purple',
-  fillColor: 'none',
-  radius: 50000,
-  }).addTo(map);
-  circle.bindPopup("Galway");
-
-  //Markers and Popups with link
-  var points = [
-    ["Hotel Green", 53.34, -6.80, "../hotel-green"],
-    ["Hotel Red", 53.27, -9.10, "../hotel-red"],
-    ["Hotel Yellow", 53.27, -9.00, "../hotel-yellow"]
-  ];
-  var marker = [];
-  var i;
-    for (i = 0; i < points.length; i++) {
-      marker[i] = new L.Marker([points[i][1], points[i][2]], {
-        win_url: points[i][3]
-      });
-      marker[i].addTo(map);
-      marker[i].labels();
-      marker[i].on('click', onClick);
-    };
-  
-function onClick(e) {
-  console.log(this.options.win_url);
-  window.open(this.options.win_url);
-}
-</script>
-
+<!--MapTiler-->
 <script>
   import * as maptilersdk from '@maptiler/sdk';
   maptilersdk.config.apiKey = 'hhyINLMnMg5pSBBIII0T';
@@ -63,4 +18,49 @@ function onClick(e) {
     center: [0, 0], // starting position [lng, lat]
     zoom: 0, // starting zoom
   });
+</script>
+
+<!--Map Position and Markers-->
+<script>
+  //Map Leaflet Ireland Centered
+  var map = L.map('map').setView([0,0], 1);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  //Create links for each marker clicked
+  var points = [
+    ["Hotel Green", 53.34, -6.20, "/"],
+    ["Hotel Red", 53.27, -9.10, "/"],
+    ["Hotel Yellow", 53.27, -9.00, "/"],
+    ["Hotel Blue", -23.53, -46.62, "/"],
+    ["Hotel White", 34.69, 135.50, "/"],
+    ["Hotel Black", 35.67, 139.25, "/"],
+  ];
+  var marker = [];
+  var i;
+    for (i = 0; i < points.length; i++) {
+      marker[i] = new L.Marker([points[i][1], points[i][2]], {
+        win_url: points[i][3]
+
+      });
+      marker[i].addTo(map);
+      marker[i].bindTooltip("H O T E L", { permanent: true, offset: [-5, 0]});
+      marker[i].on('click', onClick);
+    };
+  
+function onClick(e) {
+  console.log(this.options.win_url);
+  window.open(this.options.win_url);
+}
+
+// Heritage Position with Geojson Data from 'https://data.gov.ie/dataset/heritage-national-250k-map-of-ireland'
+  
+  var geojsonHeritage = 
+      {"type":"Feature","id":58,"geometry":{"type":"Circle","coordinates":[-8.8863830000002,53.1406899990949]},"properties":{"OBJECTID":58,"FCsubtype":1,"NAMN1":"Dunguaire Castle"}};
+
+    L.geoJSON(geojsonHeritage).bindPopup(function(layer) {
+      return layer.feature.properties.description.show_on_map;
+    }).addTo(map);
+
 </script>

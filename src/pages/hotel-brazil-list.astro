@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/LayoutClean.astro';
+
+const title = "H O T E L by N A K A T A";
+const description = "BRAZIL";
+---
+
+<Layout description={description} title={title}>
+    <main class="background-dark">
+        <div class="table table-responsive" id="hotel-list">
+            <!-- Calculate total of found Hotels in this destination -->
+            <script>
+                let y = "BRAZIL";
+                let x = document.getElementById("destination").options.length;
+                document.getElementById("total").innerHTML = " HOTEL IN " + y + " *Found total of  " + x + " properties" ;
+            </script>
+        
+            <datalist id="destination">
+                <option value="Sao Paulo, Brazil"><a href="/">HOTEL BLUE</a></option>
+            </datalist>
+
+            <script>
+            let html = document.getElementById("destination").innerHTML;
+            document.getElementById("list").innerHTML = html;
+            </script>
+
+            <table class="table table-responsive" id="hotel-list">
+                <!--
+                <thead>
+                    <tr>
+                        <th scope="col">HOTEL</th>
+                        <th scope="col">DETAILS</th>
+                    </tr>
+                </thead>
+                -->
+                <th colspan="6"> <i class="fa-solid fa-home"></i><span id="total" myFunction()>
+                </th>
+                <!-- Hotel 4 -->
+                <tr id="none">
+                        <!-- Column with picture -->
+                        <td id="line" rowspan="3"><img src="images/green-room.png"></td>
+                        <!-- Column with hotel info -->
+                        <td>
+                            <p><i class="fa-solid fa-location-pin"></i> Sao Paulo, Brazil 
+                            <br> HOTEL BLUE
+                            <br>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <br id="conveniences"> 
+                            <i class="fas fa-swimming-pool"></i>
+                            <i class="fa-solid fa-plane"></i> 
+                            <i class="fa-solid fa-umbrella-beach"></i>
+                            <i class="fa-solid fa-utensils"></i>
+                        <!-- Column with description -->  
+                        <td>                         
+                            <table>
+                                <tr>
+                                    <td id="font-small"> Rating </td>
+                                    <td rowspan="2">  </td>
+                                    <td rowspan="2" id="img-rating">&nbsp 9.0 </td>
+                                </tr>    
+                                    <td id="font-tiny"> 1.000 Reviews </td>
+                                </tr>
+                                <tr id="font-small">
+                                    <td colspan="3"> 
+                                        <br><br>From<br><span id="font-bold"> EUR 100.00 </span><br>per night<br>
+                                    </tr>
+                                </table>     
+                            <tr id="line" colspan="3" >
+                                <td colspan="2" >                                
+                                    <button><a href="../hotel-rates">VIEW RATES</a></button>  
+                                </td>                                                     
+                            </tr>
+                        </td>
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</Layout>
+
