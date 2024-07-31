@@ -1,14 +1,19 @@
 ---
-import Layout from '../layouts/LayoutClean.astro';
+import Layout from '../layouts/LayoutBooking.astro';
+import NavBooking from '../components/NavBooking.astro';
+import RatingCalendar from '../components/RatingCalendar.astro';
 
 const title = "H O T E L by N A K A T A";
-const description = "RATES";
+const description = "IRELAND";
 ---
 
 <Layout description={description} title={title}>
-    <main>
-        <div >         
-            <img src="../images/calendar.png">
+    <main class="booking-page">
+        <div class="wrap-nav-booking" id="nav-booking">
+            <NavBooking />
+        </div>
+        <div class="wrap-calendar-booking" id="rating-calendar">
+            <RatingCalendar />
         </div>
     </main>
 </Layout>

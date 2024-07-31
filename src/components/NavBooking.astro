@@ -1,32 +1,31 @@
 <!--NavBar for Booking-->
-
-<script>
-  /* Toggle between adding and removing the "responsive" class to navbar when the user clicks on the menu icon */
-  function ChangeNavbar() {
-    var x = document.getElementById("nav-vertical");
-    if (x.className === "nav") {
-      x.className += " responsive";
-    } else {
-      x.className = "nav";
-    }
-  }
-  </script>
-
-        <ul class="nav">
-            <li class="nav-item">
-                <a href="/"><i class="fa-regular fa-building"></i> DESTINATIONS </a>      
+        <ul class="nav-booking">
+            <li class="nav-item-booking">
+                <i class="fa-regular fa-building"></i> DESTINATION
+                <br>
+                <select class="nav-menu" name="destination" id="destination" >
+                  <option value="53.34, -6.20">Hotel Green</option>
+                  <option value="53.27, -9.10">Hotel Red</option>
+                  <option value="53.27, -9.00">Hotel Yellow</option>
+                  <option value="-23.53, -46.62">Hotel Blue</option>
+                  <option value="34.69, 135.50">Hotel White</option>
+                  <option value="35.67, 139.25">Hotel Black</option>
+                </select>
            </li>
-            <li class="nav-item"><a href="/"><i class="fa-regular fa-calendar" aria-hidden="true"></i> DATES </a>
-              <ul>
-                <li><a href="/">CALENDAR</a></li>
-                <li><a href="/">Select date</a></li>
-              </ul>
+            <li class="nav-item-booking"><i class="fa-regular fa-calendar" aria-hidden="true"></i> DATES 
+                <select class="nav-menu">
+                  <option> Fri 08 Mar - Sat 10 Mar </option>
+                </select>
             </li>
-            <li class="nav-item"><a href="/" aria-haspopup="true"><span><i class="fa-regular fa-user" aria-hidden="true"> </i> TRAVELLERS </a>
-                <ul>
-                    <li><a href="/">ADULTS</a></li>
-                    <li><a href="/">CHILDREN</a></li>
-                    <li><a href="/">Select guests</a></li>
-                </ul>
+            <li class="nav-item-booking"><i class="fa-regular fa-user" aria-hidden="true"></i> TRAVELLERS    
+            <div class="dropdown">
+            <select class="nav-menu" onclick="dropDown()">
+              <option>
+                Choose Number of guests
+              </option>
+            </select>
+            </li>
+            <li class="nav-item-booking">
+              <button id="search-nav"> SEARCH </button>
             </li>
         </ul>
