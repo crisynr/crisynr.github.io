@@ -9,16 +9,17 @@ const description = "JAPAN";
     <main class="background-dark">
         <div class="table table-responsive" id="hotel-list">
             <!-- Calculate total of found Hotels in this destination -->
+
+            <datalist id="destination">
+                <option value="Osaka, Japan"><a href="#">HOTEL WHITE</a></option>
+                <option value="Tokyo, Japan"><a href="#">HOTEL BLACK</a></option>
+            </datalist>
+            
             <script>
                 let y = "JAPAN";
                 let x = document.getElementById("destination").options.length;
                 document.getElementById("total").innerHTML = " HOTEL IN " + y + " *Found total of  " + x + " properties" ;
             </script>
-        
-            <datalist id="destination">
-                <option value="Osaka, Japan"><a href="#">HOTEL WHITE</a></option>
-                <option value="Tokyo, Japan"><a href="#">HOTEL BLACK</a></option>
-            </datalist>
 
             <script>
             let html = document.getElementById("destination").innerHTML;

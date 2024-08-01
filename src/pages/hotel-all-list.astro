@@ -10,12 +10,7 @@ const description = "ALL";
 
         <div class="table table-responsive" id="hotel-list">
             <!-- Calculate total of found Hotels in this destination -->
-            <script>
-                let y = "EUROPE, ASIA AND AMERICA";
-                let x = document.getElementById("destination").options.length;
-                document.getElementById("total").innerHTML = " HOTEL IN " + y + " *Found total of  " + x + " properties" ;
-            </script>
-        
+
             <datalist id="destination">
                 <option value="Dublin, Ireland"><a href="#">HOTEL GREEN</a></option>
                 <option value="Galway, Ireland"><a href="#">HOTEL RED</a></option>
@@ -23,6 +18,12 @@ const description = "ALL";
                 <option value="Osaka, Japan"><a href="#">HOTEL WHITE</a></option>
                 <option value="Tokyo, Japan"><a href="#">HOTEL BLACK</a></option>
             </datalist>
+            
+            <script>
+                let y = "EUROPE, ASIA AND AMERICA";
+                let x = document.getElementById("destination").options.length;
+                document.getElementById("total").innerHTML = " HOTEL IN " + y + " *Found total of  " + x + " properties" ;
+            </script>
 
             <script>
             let html = document.getElementById("destination").innerHTML;
