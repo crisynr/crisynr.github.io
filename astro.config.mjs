@@ -6,7 +6,7 @@ import netlify from "@astrojs/netlify";
 // https://astro.build/config
 export default defineConfig({
   integrations: [svelte(), tailwind()],
-  site: 'https://crisynr.gitlab.io',
+  site: 'https://crisynr.github.io',
   base: '/hotel',
   outDir: 'public',
   publicDir: 'static',
