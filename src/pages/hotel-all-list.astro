@@ -2,7 +2,7 @@
 import Layout from '../layouts/LayoutClean.astro';
 
 const title = "H O T E L by N A K A T A";
-const description = "IRELAND";
+const description = "ALL";
 ---
 
 <Layout description={description} title={title}>
@@ -17,11 +17,11 @@ const description = "IRELAND";
             </script>
         
             <datalist id="destination">
-                <option value="Dublin, Ireland"><a href="/">HOTEL GREEN</a></option>
-                <option value="Galway, Ireland"><a href="/">HOTEL RED</a></option>
-                <option value="Sao Paulo, Brazil"><a href="/">HOTEL YELLOW</a></option>
-                <option value="Osaka, Japan"><a href="/">HOTEL WHITE</a></option>
-                <option value="Tokyo, Japan"><a href="/">HOTEL BLACK</a></option>
+                <option value="Dublin, Ireland"><a href="#">HOTEL GREEN</a></option>
+                <option value="Galway, Ireland"><a href="#">HOTEL RED</a></option>
+                <option value="Sao Paulo, Brazil"><a href="#">HOTEL YELLOW</a></option>
+                <option value="Osaka, Japan"><a href="#">HOTEL WHITE</a></option>
+                <option value="Tokyo, Japan"><a href="#">HOTEL BLACK</a></option>
             </datalist>
 
             <script>
@@ -43,7 +43,7 @@ const description = "IRELAND";
                 <!-- Hotel 1 -->
                 <tr id="none">
                         <!-- Column with picture -->
-                        <td id="line" rowspan="3"><img src="images/green-room.png"></td>
+                        <td id="line" rowspan="3"><img src="/hotel/images/green-room.png"></td>
                         <!-- Column with hotel info -->
                         <td>
                             <p><i class="fa-solid fa-location-pin"></i> Dublin, Ireland 
@@ -76,7 +76,7 @@ const description = "IRELAND";
                                 </table>     
                             <tr id="line" colspan="3" >
                                 <td colspan="2" >                                
-                                    <button><a href="../hotel-rates" target="_parent">VIEW RATES</a></button>                                </td>                                      
+                                    <button><a href="/hotel/hotel-rates" target="_parent">VIEW RATES</a></button>                                </td>                                      
                             </tr>
                         </td>
                     </tr>
@@ -84,7 +84,7 @@ const description = "IRELAND";
                     <!-- Hotel 2 -->
                     <tr id="none">
                     <!-- Column with picture -->
-                        <td id="line" rowspan="3"><img src="images/pool.png"></td>
+                        <td id="line" rowspan="3"><img src="/hotel/images/pool.png"></td>
                         <td>
                             <p><i class="fa-solid fa-location-pin"></i> Galway, Ireland 
                             <br> HOTEL RED 
@@ -117,7 +117,7 @@ const description = "IRELAND";
                             </table>    
                         <tr id="line" colspan="3">
                             <td colspan="2">                                
-                                <button><a href="../hotel-rates" target="_parent">VIEW RATES</a></button>
+                                <button><a href="/hotel/hotel-rates" target="_parent">VIEW RATES</a></button>
                             </td>                                      
                         </tr>
                     </td>
@@ -126,7 +126,7 @@ const description = "IRELAND";
                 <tr>
                     <!-- Hotel 3 -->
                     <tr id="none">
-                        <td id="line" rowspan="3"><img src="images/yellow-room.png"></td>
+                        <td id="line" rowspan="3"><img src="/hotel/images/yellow-room.png"></td>
                         <td>
                             <p><i class="fa-solid fa-location-pin"></i> Galway, Ireland 
                                 <br> HOTEL YELLOW 
@@ -158,7 +158,7 @@ const description = "IRELAND";
                             </table>   
                             <tr id="line" colspan="3">
                                 <td colspan="2">                                
-                                    <button><a href="../hotel-rates" target="_parent">VIEW RATES</a></button>                                </td>                                      
+                                    <button><a href="/hotel/hotel-rates" target="_parent">VIEW RATES</a></button>                                </td>                                      
                             </tr>
                         </td>
                     </tr>
@@ -167,7 +167,7 @@ const description = "IRELAND";
                 <!-- Hotel 4 -->
                 <tr id="none">
                     <!-- Column with picture -->
-                    <td id="line" rowspan="3"><img src="images/green-room.png"></td>
+                    <td id="line" rowspan="3"><img src="/hotel/images/green-room.png"></td>
                     <!-- Column with hotel info -->
                     <td>
                         <p><i class="fa-solid fa-location-pin"></i> Dublin, Ireland 
@@ -200,7 +200,7 @@ const description = "IRELAND";
                             </table>     
                         <tr id="line" colspan="3" >
                             <td colspan="2" >                                
-                                <button><a href="../hotel-rates" target="_parent">VIEW RATES</a></button>  
+                                <button><a href="/hotel/hotel-rates" target="_parent">VIEW RATES</a></button>  
                             </td>                                                     
                         </tr>
                     </td>
@@ -212,7 +212,7 @@ const description = "IRELAND";
                                  <!-- Hotel 5 -->
                                  <tr id="none">
                                     <!-- Column with picture -->
-                                    <td id="line" rowspan="3"><img src="images/green-room.png"></td>
+                                    <td id="line" rowspan="3"><img src="/hotel/images/green-room.png"></td>
                                     <!-- Column with hotel info -->
                                     <td>
                                         <p><i class="fa-solid fa-location-pin"></i> Osaka, Japan 
@@ -245,7 +245,7 @@ const description = "IRELAND";
                                             </table>     
                                         <tr id="line" colspan="3" >
                                             <td colspan="2" >                                
-                                                <button><a href="../hotel-rates" target="_parent">VIEW RATES</a></button>                                </td>                                      
+                                                <button><a href="/hotel/hotel-rates" target="_parent">VIEW RATES</a></button>                                </td>                                      
                                         </tr>
                                     </td>
                                 </tr>
@@ -253,7 +253,7 @@ const description = "IRELAND";
                                 <!-- Hotel 6 -->
                                 <tr id="none">
                                 <!-- Column with picture -->
-                                    <td id="line" rowspan="3"><img src="images/pool.png"></td>
+                                    <td id="line" rowspan="3"><img src="/hotel/images/pool.png"></td>
                                     <td>
                                         <p><i class="fa-solid fa-location-pin"></i> Tokyo, Japan
                                         <br> HOTEL BLACK
@@ -287,7 +287,7 @@ const description = "IRELAND";
                                         </table>    
                                     <tr id="line" colspan="3">
                                         <td colspan="2">                                
-                                            <button><a href="../hotel-rates" target="_parent">VIEW RATES</a></button>                                </td>                                      
+                                            <button><a href="/hotel/hotel-rates" target="_parent">VIEW RATES</a></button>                                </td>                                      
                                         </td>                                      
                                     </tr>
                                 </td>
