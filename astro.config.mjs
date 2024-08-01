@@ -7,7 +7,7 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   integrations: [svelte(), tailwind()],
   site: 'https://crisynr.github.io',
-  base: '/hotel',
+  base: 'hotel',
   outDir: 'public',
   publicDir: 'static',
   output: "server",
