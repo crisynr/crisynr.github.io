@@ -583,13 +583,13 @@ nav #nav li ul:not( :hover ) li.active a {
   }
   #right{
     float: right;
-    margin: 20px 35px;
+    margin: 20px 30px;
   }
   .logo{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
+    width: 130px;
     height: 10px;
   }
   nav img {
