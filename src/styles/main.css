@@ -700,6 +700,16 @@ nav #nav li ul:not( :hover ) li.active a {
     max-width: 890px;
     margin: 100px auto 100px auto ;
   }
+  /* Floating box*/
+  .wrap-search {
+    position: relative;
+    background-clip:content-box;
+    padding: 260px 0;
+    border-radius: 25px;
+    block-size: fit-content;
+    overflow: hidden;
+  }
+
 }
 /*Search Destination Bar*/
 .search-destination {
@@ -708,7 +718,7 @@ nav #nav li ul:not( :hover ) li.active a {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.6);
   max-width: 890px;
-  min-width: 350px;
+  min-width: 320px;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
