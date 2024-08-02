@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/LayoutClean.astro';
+import greenImage from '~/assets/green-room.png';
 
 const title = "H O T E L by N A K A T A";
 const description = "BRAZIL";
@@ -41,7 +42,7 @@ const description = "BRAZIL";
                 <!-- Hotel 4 -->
                 <tr id="none">
                         <!-- Column with picture -->
-                        <td id="line" rowspan="3"><img src="/hotel/images/green-room.png"></td>
+                        <td id="line" rowspan="3"><img src={greenImage.src}></td>
                         <!-- Column with hotel info -->
                         <td>
                             <p><i class="fa-solid fa-location-pin"></i> Sao Paulo, Brazil 

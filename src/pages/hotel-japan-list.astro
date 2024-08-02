@@ -1,5 +1,7 @@
 ---
 import Layout from '~/layouts/LayoutClean.astro';
+import greenImage from '~/assets/green-room.png';
+import poolImage from '~/assets/pool.png';
 
 const title = "H O T E L by N A K A T A";
 const description = "JAPAN";
@@ -40,7 +42,7 @@ const description = "JAPAN";
                  <!-- Hotel 5 -->
                  <tr id="none">
                     <!-- Column with picture -->
-                    <td id="line" rowspan="3"><img src="/hotel/images/green-room.png"></td>
+                    <td id="line" rowspan="3"><img src={greenImage.src}></td>
                     <!-- Column with hotel info -->
                     <td>
                         <p><i class="fa-solid fa-location-pin"></i> Osaka, Japan 
@@ -86,7 +88,7 @@ const description = "JAPAN";
                 <!-- Hotel 6 -->
                 <tr id="none">
                 <!-- Column with picture -->
-                    <td id="line" rowspan="3"><img src="/hotel/images/pool.png"></td>
+                    <td id="line" rowspan="3"><img src={poolImage.src}></td>
                     <td>
                         <p><i class="fa-solid fa-location-pin"></i> Tokyo, Japan
                         <br> HOTEL BLACK

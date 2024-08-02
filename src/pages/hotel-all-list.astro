@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/LayoutClean.astro';
+import greenImage from '~/assets/green-room.png';
+import yellowImage from '~/assets/yellow-room.png';
+import poolImage from '~/assets/pool.png';
 
 const title = "H O T E L by N A K A T A";
 const description = "ALL";
@@ -44,7 +47,7 @@ const description = "ALL";
                 <!-- Hotel 1 -->
                 <tr id="none">
                         <!-- Column with picture -->
-                        <td id="line" rowspan="3"><img src="/hotel/images/green-room.png"></td>
+                        <td id="line" rowspan="3"><img src={greenImage.src}></td>
                         <!-- Column with hotel info -->
                         <td>
                             <p><i class="fa-solid fa-location-pin"></i> Dublin, Ireland 
@@ -85,7 +88,7 @@ const description = "ALL";
                     <!-- Hotel 2 -->
                     <tr id="none">
                     <!-- Column with picture -->
-                        <td id="line" rowspan="3"><img src="/hotel/images/pool.png"></td>
+                        <td id="line" rowspan="3"><img src={poolImage.src}></td>
                         <td>
                             <p><i class="fa-solid fa-location-pin"></i> Galway, Ireland 
                             <br> HOTEL RED 
@@ -127,7 +130,7 @@ const description = "ALL";
                 <tr>
                     <!-- Hotel 3 -->
                     <tr id="none">
-                        <td id="line" rowspan="3"><img src="/hotel/images/yellow-room.png"></td>
+                        <td id="line" rowspan="3"><img src={yellowImage.src}></td>
                         <td>
                             <p><i class="fa-solid fa-location-pin"></i> Galway, Ireland 
                                 <br> HOTEL YELLOW 
@@ -168,7 +171,7 @@ const description = "ALL";
                 <!-- Hotel 4 -->
                 <tr id="none">
                     <!-- Column with picture -->
-                    <td id="line" rowspan="3"><img src="/hotel/images/green-room.png"></td>
+                    <td id="line" rowspan="3"><img src={greenImage.src}></td>
                     <!-- Column with hotel info -->
                     <td>
                         <p><i class="fa-solid fa-location-pin"></i> Dublin, Ireland 
@@ -213,7 +216,7 @@ const description = "ALL";
                                  <!-- Hotel 5 -->
                                  <tr id="none">
                                     <!-- Column with picture -->
-                                    <td id="line" rowspan="3"><img src="/hotel/images/green-room.png"></td>
+                                    <td id="line" rowspan="3"><img src={yellowImage.src}></td>
                                     <!-- Column with hotel info -->
                                     <td>
                                         <p><i class="fa-solid fa-location-pin"></i> Osaka, Japan 
@@ -254,7 +257,7 @@ const description = "ALL";
                                 <!-- Hotel 6 -->
                                 <tr id="none">
                                 <!-- Column with picture -->
-                                    <td id="line" rowspan="3"><img src="/hotel/images/pool.png"></td>
+                                    <td id="line" rowspan="3"><img src={poolImage.src}></td>
                                     <td>
                                         <p><i class="fa-solid fa-location-pin"></i> Tokyo, Japan
                                         <br> HOTEL BLACK
