@@ -369,7 +369,7 @@ carousel-image {
   position: relative;
   background-clip:content-box;
   padding: 260px 100px;
-  min-width: 350px;
+  min-width: 400px;
   border-radius: 25px;
   block-size: fit-content;
   overflow: hidden;
