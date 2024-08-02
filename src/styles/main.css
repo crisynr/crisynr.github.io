@@ -369,7 +369,6 @@ carousel-image {
   position: relative;
   background-clip:content-box;
   padding: 260px 100px;
-  min-width: 400px;
   border-radius: 25px;
   block-size: fit-content;
   overflow: hidden;
@@ -708,7 +707,8 @@ nav #nav li ul:not( :hover ) li.active a {
   padding: 16px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.6);
-  max-width: 1300px;
+  max-width: 890px;
+  min-width: 350px;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
